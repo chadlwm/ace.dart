@@ -1,0 +1,7 @@
+pubspec.lock
+packages/
+example/
+test/
+docs/
+build/
+!examples/packages/
