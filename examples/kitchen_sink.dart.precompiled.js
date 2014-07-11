@@ -467,7 +467,7 @@ aX:{
 "^":"a;jO,Gx,fW,En<,EE<,Qy,PX,xF?,UF<,C9<,lJ,Jp,M2,mf,pa,x8",
 v8:function(a,b){if(!this.Qy.n(0,a))return
 if(this.lJ.h(0,b)&&!this.UF)this.UF=!0
-this.PC()},
+this.Ym()},
 cK:function(a){var z,y,x,w,v,u
 if(!this.UF)return
 z=this.lJ
@@ -482,7 +482,7 @@ w=(w-1&u-1)>>>0
 y.av=w
 if(w<0||w>=u)return H.e(v,w)
 v[w]=x
-if(w===y.HV)y.VW();++y.qT}this.UF=!1}this.PC()},
+if(w===y.eZ)y.VW();++y.qT}this.UF=!1}this.Ym()},
 iK:function(a){var z=this.Jp
 if(z==null){z=[]
 this.Jp=z}if(J.kE(z,a))return
@@ -564,7 +564,7 @@ hV:function(a){return this.Gx.t(0,a)},
 aU:function(a,b){var z=this.Gx
 if(z.x4(a))throw H.b(P.FM("Registry: ports must be registered only once."))
 z.u(0,a,b)},
-PC:function(){if(this.Gx.hr-this.fW.hr>0||this.UF||!this.xF)init.globalState.i2.u(0,this.jO,this)
+Ym:function(){if(this.Gx.hr-this.fW.hr>0||this.UF||!this.xF)init.globalState.i2.u(0,this.jO,this)
 else this.Dm()},
 Dm:[function(){var z,y
 z=this.M2
@@ -584,7 +584,7 @@ $isEH:true},
 cC:{
 "^":"a;Rk,GL",
 Jc:function(){var z=this.Rk
-if(z.av===z.HV)return
+if(z.av===z.eZ)return
 return z.C4()},
 xB:function(){var z,y,x
 z=this.Jc()
@@ -1296,6 +1296,34 @@ $.NF=new H.dC(v)
 $.TX=new H.wN(u)
 $.x7=new H.VX(t)},
 ud:function(a,b){return a(b)||b},
+ys:{
+"^":"a;",
+bu:function(a){return P.vW(this)},
+EP:function(){throw H.b(P.f("Cannot modify unmodifiable Map"))},
+u:function(a,b,c){return this.EP()},
+$isZ0:true},
+LP:{
+"^":"ys;B>,HV,tc",
+x4:function(a){if(typeof a!=="string")return!1
+if("__proto__"===a)return!1
+return this.HV.hasOwnProperty(a)},
+t:function(a,b){if(!this.x4(b))return
+return this.TZ(b)},
+TZ:function(a){return this.HV[a]},
+aN:function(a,b){var z,y,x
+z=this.tc
+for(y=0;y<z.length;++y){x=z[y]
+b.$2(x,this.TZ(x))}},
+gvc:function(){return H.VM(new H.XR(this),[H.Kp(this,0)])},
+gUQ:function(a){return H.K1(this.tc,new H.hY(this),H.Kp(this,0),H.Kp(this,1))},
+$isqC:true},
+hY:{
+"^":"Tp:32;a",
+$1:[function(a){return this.a.TZ(a)},"$1",null,2,0,null,36,"call"],
+$isEH:true},
+XR:{
+"^":"mW;Y3",
+gA:function(a){return J.GP(this.Y3.tc)}},
 LI:{
 "^":"a;lK,uk,xI,rq,FX,Nc",
 gWa:function(){return this.lK},
@@ -1361,7 +1389,7 @@ y=z[0]
 x=z[1]
 return new H.FD(a,z,(y&1)===1,y>>1,x>>1,(x&1)===1,z[2],null)}}},
 Nv:{
-"^":"Tp:36;a,b,c",
+"^":"Tp:37;a,b,c",
 $1:function(a){var z,y,x
 z=this.b.NE
 y=this.a.a++
@@ -1370,14 +1398,14 @@ if(y>=z.length)return H.e(z,y)
 z[y]=x},
 $isEH:true},
 Cj:{
-"^":"Tp:37;a,b,c",
+"^":"Tp:38;a,b,c",
 $2:function(a,b){var z=this.a
 z.b=z.b+"$"+H.d(a)
 this.c.push(a)
 this.b.push(b);++z.a},
 $isEH:true},
 u8:{
-"^":"Tp:37;a,b",
+"^":"Tp:38;a,b",
 $2:function(a,b){var z=this.b
 if(z.x4(a))z.u(0,a,b)
 else this.a.a=!0},
@@ -1566,11 +1594,11 @@ dC:{
 $1:function(a){return this.a(a)},
 $isEH:true},
 wN:{
-"^":"Tp:38;b",
+"^":"Tp:39;b",
 $2:function(a,b){return this.b(a,b)},
 $isEH:true},
 VX:{
-"^":"Tp:36;c",
+"^":"Tp:37;c",
 $1:function(a){return this.c(a)},
 $isEH:true}}],["","",,E,{
 "^":"",
@@ -1620,12 +1648,13 @@ z.sdL(x)
 x=z.cs.V7("getSession",null)
 $.DG.toString
 new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,x,null).sFW(0,B.Vx("ace/mode/dart"))
-z.cs.V7("setValue",["main() {\n  var x = \"All this is syntax highlighted\";          \n}\n",0])
+z.PC("// Go ahead and modify this example.\n\nimport \"dart:html\";\n\n// Computes the nth Fibonacci number.\nint fibonacci(int n) {\n  if (n < 2) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// Displays a Fibonacci number.\nvoid main() {\n  int i = 20;\n  String message = \"fibonacci($i) = ${fibonacci(i)}\";\n\n  // This example uses HTML to display the result and it will appear\n  // in a nested HTML frame (an iframe).\n  document.body.append(new HeadingElement.h1()..appendText(message));\n}\n",-1)
 z=$.fw().cs.V7("getSession",null)
 x=[]
 C.Nm.FV(x,H.VM(new H.A8([C.M7,C.AT],B.Np()),[null,null]).ez(0,P.En()))
 z.V7("setAnnotations",[H.VM(new P.Tz(x),[null])])
 D.Xu()
+$.qW().appendChild(D.Vs())
 $.qW().appendChild(D.cw())
 $.qW().appendChild(D.Vv())
 $.qW().appendChild(D.TP())},"$0","HA",0,0,10],
@@ -1638,6 +1667,22 @@ x=P.EF(["enableBasicAutocompletion",!0,"enableSnippets",!0],null,null)
 y.toString
 x=P.bH(x)
 y.cs.V7("setOptions",[x])},
+Vs:function(){var z,y,x,w,v
+z=document.createElement("select",null)
+for(y=C.eD.gvc(),y=y.gA(y);y.G();){x=y.gl()
+w=W.oK("","",null,!1)
+w.textContent=x
+w.value=x
+z.appendChild(w)}y=J.RE(z)
+y.sP(z,"dart")
+y=y.gi9(z)
+H.VM(new W.xC(0,y.uv,y.Ph,W.VF(new D.KQ(z)),y.Sg),[H.Kp(y,0)]).Zz()
+v=document.createElement("div",null)
+y=document.createElement("span",null)
+y.textContent="Document "
+v.appendChild(y)
+v.appendChild(z)
+return v},
 TP:function(){var z,y,x,w,v,u
 z=document.createElement("select",null)
 for(y=new H.a7(C.dk,3,0,null);y.G();){x=y.lo
@@ -1653,22 +1698,20 @@ y.textContent="Key binding "
 u.appendChild(y)
 u.appendChild(z)
 return u},
-cw:function(){var z,y,x,w,v
-z=document.createElement("select",null)
-for(y=new H.a7(C.yg,112,0,null);y.G();){x=y.lo
-w=W.oK("","",null,!1)
-w.textContent=x
-w.value=x
-z.appendChild(w)}y=J.RE(z)
-y.sP(z,"dart")
-y=y.gi9(z)
-H.VM(new W.xC(0,y.uv,y.Ph,W.VF(new D.eI(z)),y.Sg),[H.Kp(y,0)]).Zz()
-v=document.createElement("div",null)
-y=document.createElement("span",null)
-y.textContent="Mode "
-v.appendChild(y)
-v.appendChild(z)
-return v},
+cw:function(){var z,y,x,w
+for(z=new H.a7(C.yg,112,0,null);z.G();){y=z.lo
+x=W.oK("","",null,!1)
+x.textContent=y
+x.value=y
+$.aA().appendChild(x)}J.Fc($.aA(),"dart")
+z=J.uX($.aA())
+H.VM(new W.xC(0,z.uv,z.Ph,W.VF(new D.eI()),z.Sg),[H.Kp(z,0)]).Zz()
+w=document.createElement("div",null)
+z=document.createElement("span",null)
+z.textContent="Mode "
+w.appendChild(z)
+w.appendChild($.aA())
+return w},
 Vv:function(){var z,y,x,w,v
 z=document.createElement("select",null)
 for(y=new H.a7(C.Gq,32,0,null);y.G();){x=y.lo
@@ -1686,8 +1729,16 @@ v.appendChild(y)
 v.appendChild(z)
 return v},
 OJ:{
-"^":"Tp:39;",
+"^":"Tp:40;",
 $4:function(a,b,c,d){return P.Ab([C.c5],null)},
+$isEH:true},
+KQ:{
+"^":"Tp:32;a",
+$1:[function(a){var z,y
+z=this.a
+y=J.RE(z)
+$.fw().PC(C.eD.t(0,y.gP(z)),-1)
+J.Fc($.aA(),y.gP(z))},"$1",null,2,0,null,41,"call"],
 $isEH:true},
 QZ:{
 "^":"Tp:32;a",
@@ -1700,15 +1751,15 @@ y=E.qh(x)
 z.toString
 w=y.cs
 y=w!=null?w:y.Ii
-z.cs.V7("setKeyboardHandler",[y])},"$1",null,2,0,null,40,"call"],
+z.cs.V7("setKeyboardHandler",[y])},"$1",null,2,0,null,41,"call"],
 $isEH:true},
 eI:{
-"^":"Tp:32;a",
+"^":"Tp:32;",
 $1:[function(a){var z,y
 z=$.fw().cs.V7("getSession",null)
-y="ace/mode/"+H.d(J.Vm(this.a))
+y="ace/mode/"+H.d(J.Vm($.aA()))
 $.DG.toString
-new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,z,null).sFW(0,B.Vx(y))},"$1",null,2,0,null,40,"call"],
+new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,z,null).sFW(0,B.Vx(y))},"$1",null,2,0,null,41,"call"],
 $isEH:true},
 KY:{
 "^":"Tp:32;a",
@@ -1719,7 +1770,7 @@ $.DG.toString
 x=new B.Gn(J.UQ(J.UQ($.cM(),"ace"),"config"),null).Eu("theme",y)
 y=new B.WI(y,null,x)
 y.ea(x)
-z.sdL(y)},"$1",null,2,0,null,40,"call"],
+z.sdL(y)},"$1",null,2,0,null,41,"call"],
 $isEH:true}},1],["","",,B,{
 "^":"",
 yX:function(a){var z=P.uw($.MQ(),null)
@@ -1747,7 +1798,7 @@ Ku:{
 $2:function(a,b){J.kW(this.a,a,b)},
 $isEH:true},
 kL:{
-"^":"cj:41;",
+"^":"cj:42;",
 $2:function(a,b){return this.cs.V7(a,b)},
 $1:function(a){return this.$2(a,null)},
 Sy:function(){if(this.cs==null)return P.Ab(null,null)
@@ -1758,7 +1809,7 @@ $isEH:true},
 bn:{
 "^":"Tp:32;a",
 $1:[function(a){this.a.cs=a
-return a},"$1",null,2,0,null,42,"call"],
+return a},"$1",null,2,0,null,43,"call"],
 $isEH:true},
 Zs:{
 "^":"Tp:10;a",
@@ -1778,7 +1829,7 @@ rk:{
 "^":"Tp:32;a",
 $1:[function(a){var z=this.a.MM
 if(z.Gv!==0)H.vh(P.w("Future already completed"))
-z.OH(a)},"$1",null,2,0,null,43,"call"],
+z.OH(a)},"$1",null,2,0,null,44,"call"],
 $isEH:true},
 uo:{
 "^":"kL;b2,JC,xN,kF,D4,IA,ks,dZ,jV,bz,Xb,VB,cs,cH",
@@ -1803,7 +1854,8 @@ cN:function(){var z,y
 z=H.VM([],[P.b8])
 y=this.b2
 if(y!=null)z.push(y.Sy())
-return P.pH(z,!1)}},
+return P.pH(z,!1)},
+PC:function(a,b){return this.cs.V7("setValue",[a,b])}},
 C5:{
 "^":"kL;Ii,cs,cH",
 static:{Rs:function(a){var z,y
@@ -1818,7 +1870,7 @@ y.ea(z)
 return y}}},
 VB:{
 "^":"Tp:32;",
-$1:[function(a){return P.Ab(J.UQ(a,"handler"),null)},"$1",null,2,0,null,43,"call"],
+$1:[function(a){return P.Ab(J.UQ(a,"handler"),null)},"$1",null,2,0,null,44,"call"],
 $isEH:true},
 Lk:{
 "^":"Tp:10;a",
@@ -1834,7 +1886,7 @@ static:{S8:function(a){var z=new B.Yj(a,P.uw($.MQ(),null),null)
 z.BU(a)
 return z}}},
 GN:{
-"^":"Tp:48;a",
+"^":"Tp:49;a",
 $5:[function(a,b,c,d,e){var z,y,x,w,v,u
 z=a==null?null:new B.KD(null,null,null,null,null,null,null,null,null,a,null)
 y=b==null?null:new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,b,null)
@@ -1845,13 +1897,13 @@ v=P.VH(new B.Jp(e),w)
 $.X3.toString
 u=H.VM(new P.vs(0,w,null,null,null,null,v,null),[null])
 x.au(u)
-u.wM(new B.mc(z,y))},"$5",null,10,0,null,44,45,46,47,28,"call"],
+u.wM(new B.mc(z,y))},"$5",null,10,0,null,45,46,47,48,28,"call"],
 $isEH:true},
 PV:{
-"^":"Tp:50;b",
+"^":"Tp:51;b",
 $1:[function(a){var z=[]
 C.Nm.FV(z,J.C0(a,B.Dv()).ez(0,P.En()))
-this.b.PO([null,H.VM(new P.Tz(z),[null])])},"$1",null,2,0,null,49,"call"],
+this.b.PO([null,H.VM(new P.Tz(z),[null])])},"$1",null,2,0,null,50,"call"],
 $isEH:true},
 Jp:{
 "^":"Tp:32;c",
@@ -1880,7 +1932,7 @@ y.ea(z)
 return y}}},
 jq:{
 "^":"Tp:32;",
-$1:[function(a){return P.Ab(P.uw(J.UQ(a,"Mode"),null),null)},"$1",null,2,0,null,43,"call"],
+$1:[function(a){return P.Ab(P.uw(J.UQ(a,"Mode"),null),null)},"$1",null,2,0,null,44,"call"],
 $isEH:true},
 WI:{
 "^":"kL;Ii,cs,cH"}}],["","",,H,{
@@ -2195,10 +2247,10 @@ z.b=null
 x=--z.c
 if(y!=null)if(x===0||this.b)z.a.w0(a,b)
 else{z.d=a
-z.e=b}else if(x===0&&!this.b)z.a.w0(z.d,z.e)},"$2",null,4,0,null,51,52,"call"],
+z.e=b}else if(x===0&&!this.b)z.a.w0(z.d,z.e)},"$2",null,4,0,null,52,53,"call"],
 $isEH:true},
 ff:{
-"^":"Tp:53;a,c,d",
+"^":"Tp:54;a,c,d",
 $1:[function(a){var z,y,x,w
 z=this.a
 y=--z.c
@@ -2369,7 +2421,7 @@ pV:{
 $1:[function(a){this.a.R8(a)},"$1",null,2,0,null,18,"call"],
 $isEH:true},
 U7:{
-"^":"Tp:54;b",
+"^":"Tp:55;b",
 $2:[function(a,b){this.b.K5(a,b)},function(a){return this.$2(a,null)},"$1","$2",null,null,2,2,null,20,21,22,"call"],
 $isEH:true},
 rH:{
@@ -2385,7 +2437,7 @@ ZL:{
 $0:function(){this.a.K5(this.b,this.c)},
 $isEH:true},
 rq:{
-"^":"Tp:55;b,d,e,f",
+"^":"Tp:56;b,d,e,f",
 $0:function(){var z,y,x,w
 try{this.b.c=this.f.FI(this.d.gO1(),this.e)
 return!0}catch(x){w=H.Ru(x)
@@ -2452,10 +2504,10 @@ z.a.Rx(new P.jZ(this.c,v),new P.FZ(z,v))}},
 $isEH:true},
 jZ:{
 "^":"Tp:32;c,HZ",
-$1:[function(a){P.HZ(this.c.e,this.HZ)},"$1",null,2,0,null,56,"call"],
+$1:[function(a){P.HZ(this.c.e,this.HZ)},"$1",null,2,0,null,57,"call"],
 $isEH:true},
 FZ:{
-"^":"Tp:54;a,mG",
+"^":"Tp:55;a,mG",
 $2:[function(a,b){var z,y
 z=this.a
 if(!J.x(z.a).$isvs){y=P.Dt(null)
@@ -2482,7 +2534,7 @@ this.X5(new P.B5(z),!0,new P.PI(z,y),y.giO())
 return y}},
 lz:{
 "^":"Tp;a,b,c,d",
-$1:[function(a){P.FE(new P.Rl(this.c,a),new P.Jb(),P.TB(this.a.a,this.d))},"$1",null,2,0,null,57,"call"],
+$1:[function(a){P.FE(new P.Rl(this.c,a),new P.Jb(),P.TB(this.a.a,this.d))},"$1",null,2,0,null,58,"call"],
 $isEH:true,
 $signature:function(){return H.IG(function(a){return{func:"Lf",args:[a]}},this.b,"cb")}},
 Rl:{
@@ -2499,7 +2551,7 @@ $0:[function(){this.UI.rX(null)},"$0",null,0,0,null,"call"],
 $isEH:true},
 B5:{
 "^":"Tp:32;a",
-$1:[function(a){++this.a.a},"$1",null,2,0,null,40,"call"],
+$1:[function(a){++this.a.a},"$1",null,2,0,null,41,"call"],
 $isEH:true},
 PI:{
 "^":"Tp:10;a,b",
@@ -2686,7 +2738,7 @@ v1:{
 $0:[function(){return this.a.K5(this.b,this.c)},"$0",null,0,0,null,"call"],
 $isEH:true},
 uR:{
-"^":"Tp:58;a,b",
+"^":"Tp:59;a,b",
 $2:function(a,b){return P.NX(this.a,this.b,a,b)},
 $isEH:true},
 YR:{
@@ -2719,8 +2771,8 @@ z.QE()},"$0","gZ9",0,0,16],
 tA:function(){var z=this.hG
 if(z!=null){this.hG=null
 z.ed()}return},
-vx:[function(a){this.UY.Ml(a,this)},"$1","gOa",2,0,function(){return H.IG(function(a,b){return{func:"kA",void:true,args:[a]}},this.$receiver,"fB")},59],
-xL:[function(a,b){this.V8(a,b)},"$2","gRE",4,0,60,21,22],
+vx:[function(a){this.UY.Ml(a,this)},"$1","gOa",2,0,function(){return H.IG(function(a,b){return{func:"kA",void:true,args:[a]}},this.$receiver,"fB")},60],
+xL:[function(a,b){this.V8(a,b)},"$2","gRE",4,0,61,21,22],
 fE:[function(){this.Ig()},"$0","gH1",0,0,16],
 Xa:function(a,b,c,d,e,f,g){var z,y
 z=this.gOa()
@@ -2795,11 +2847,11 @@ $0:[function(){return this.c.Gr(this.d)},"$0",null,0,0,null,"call"],
 $isEH:true},
 pQ:{
 "^":"Tp:32;a,b",
-$1:[function(a){return this.a.m1(this.b,a)},"$1",null,2,0,null,61,"call"],
+$1:[function(a){return this.a.m1(this.b,a)},"$1",null,2,0,null,62,"call"],
 $isEH:true},
 FG:{
 "^":"Tp:32;c,d",
-$1:[function(a){return this.c.FI(this.d,a)},"$1",null,2,0,null,61,"call"],
+$1:[function(a){return this.c.FI(this.d,a)},"$1",null,2,0,null,62,"call"],
 $isEH:true}}],["","",,P,{
 "^":"",
 EF:function(a,b,c){return H.B7(a,H.VM(new P.YB(0,null,null,null,null,null,0),[b,c]))},
@@ -2957,7 +3009,7 @@ delete z["<non-identifier-key>"]
 return z}}},
 oi:{
 "^":"Tp:32;a",
-$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,62,"call"],
+$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,63,"call"],
 $isEH:true},
 PL:{
 "^":"k6;hr,vv,OX,OB,wV",
@@ -3101,7 +3153,7 @@ delete z["<non-identifier-key>"]
 return z}}},
 a1:{
 "^":"Tp:32;a",
-$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,62,"call"],
+$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,63,"call"],
 $isEH:true},
 db:{
 "^":"a;kh<,cA@,DG@,zQ@"},
@@ -3300,26 +3352,26 @@ z.KF(": ")
 z.KF(b)},
 $isEH:true},
 Sw:{
-"^":"mW;v5,av,HV,qT",
-gA:function(a){return new P.o0(this,this.HV,this.qT,this.av,null)},
+"^":"mW;v5,av,eZ,qT",
+gA:function(a){return new P.o0(this,this.eZ,this.qT,this.av,null)},
 aN:function(a,b){var z,y,x
 z=this.qT
-for(y=this.av;y!==this.HV;y=(y+1&this.v5.length-1)>>>0){x=this.v5
+for(y=this.av;y!==this.eZ;y=(y+1&this.v5.length-1)>>>0){x=this.v5
 if(y<0||y>=x.length)return H.e(x,y)
 b.$1(x[y])
 if(z!==this.qT)H.vh(P.a4(this))}},
-gl0:function(a){return this.av===this.HV},
-gB:function(a){return(this.HV-this.av&this.v5.length-1)>>>0},
+gl0:function(a){return this.av===this.eZ},
+gB:function(a){return(this.eZ-this.av&this.v5.length-1)>>>0},
 V1:function(a){var z,y,x,w,v
 z=this.av
-y=this.HV
+y=this.eZ
 if(z!==y){for(x=this.v5,w=x.length,v=w-1;z!==y;z=(z+1&v)>>>0){if(z<0||z>=w)return H.e(x,z)
-x[z]=null}this.HV=0
+x[z]=null}this.eZ=0
 this.av=0;++this.qT}},
 bu:function(a){return P.WE(this,"{","}")},
 C4:function(){var z,y,x,w
 z=this.av
-if(z===this.HV)throw H.b(H.Wp());++this.qT
+if(z===this.eZ)throw H.b(H.Wp());++this.qT
 y=this.v5
 x=y.length
 if(z>=x)return H.e(y,z)
@@ -3329,12 +3381,12 @@ this.av=(z+1&x-1)>>>0
 return w},
 NZ:function(a){var z,y,x
 z=this.v5
-y=this.HV
+y=this.eZ
 x=z.length
 if(y<0||y>=x)return H.e(z,y)
 z[y]=a
 x=(y+1&x-1)>>>0
-this.HV=x
+this.eZ=x
 if(this.av===x)this.VW();++this.qT},
 VW:function(){var z,y,x,w
 z=Array(this.v5.length*2)
@@ -3348,7 +3400,7 @@ z=this.av
 x=this.v5
 H.qG(y,w,w+z,x,0)
 this.av=0
-this.HV=this.v5.length
+this.eZ=this.v5.length
 this.v5=y},
 Pt:function(a,b){var z=Array(8)
 z.fixed$length=init
@@ -3419,7 +3471,7 @@ Y2:{
 $2:function(a,b){this.a.u(0,a.gfN(),b)},
 $isEH:true},
 CL:{
-"^":"Tp:63;a",
+"^":"Tp:64;a",
 $2:function(a,b){var z=this.a
 if(z.b>0)z.a.KF(", ")
 z.a.KF(a.gfN())
@@ -3491,7 +3543,7 @@ return""+C.jn.cU(y,3600000000)+":"+H.d(x)+":"+H.d(w)+"."+H.d(v)},
 $isa6:true,
 static:{"^":"Wt,S4,pk,Lo,zj,b2,q9,Ie,Do,Cv,kT,IJ,D9,Vk,nJ,rG",k5:function(a,b,c,d,e,f){return new P.a6(a*86400000000+b*3600000000+e*60000000+f*1000000+d*1000+c)}}},
 P7:{
-"^":"Tp:64;",
+"^":"Tp:65;",
 $1:function(a){if(a>=100000)return""+a
 if(a>=10000)return"0"+a
 if(a>=1000)return"00"+a
@@ -3500,7 +3552,7 @@ if(a>=10)return"0000"+a
 return"00000"+a},
 $isEH:true},
 DW:{
-"^":"Tp:64;",
+"^":"Tp:65;",
 $1:function(a){if(a>=10)return""+a
 return"0"+a},
 $isEH:true},
@@ -3679,7 +3731,7 @@ gi9:function(a){return H.VM(new W.Cq(a,C.mt.Ph,!1),[null])},
 Fs:{
 "^":"qE;t5:type=",
 "%":"HTMLEmbedElement"},
-hY:{
+Ty:{
 "^":"ea;kc:error=",
 "%":"ErrorEvent"},
 ea:{
@@ -4274,6 +4326,7 @@ if(a instanceof P.a)return a
 return J.ks(a)}
 J.AG=function(a){return J.x(a).bu(a)}
 J.C0=function(a,b){return J.w1(a).ez(a,b)}
+J.Fc=function(a,b){return J.RE(a).sP(a,b)}
 J.GJ=function(a,b,c,d){return J.RE(a).Y9(a,b,c,d)}
 J.GP=function(a){return J.w1(a).gA(a)}
 J.UN=function(a,b){if(typeof a=="number"&&typeof b=="number")return(a^b)>>>0
@@ -4457,6 +4510,8 @@ C.Gq=I.uL(["ambiance","chaos","chrome","clouds","clouds_midnight","cobalt","crim
 C.yg=I.uL(["abap","actionscript","ada","apache_conf","applescript","asciidoc","assembly_x86","autohotkey","batchfile","c9search","c_cpp","cirru","clojure","cobol","coffee","coldfusion","csharp","css","curly","d","dart","diff","django","dockerfile","dot","ejs","erlang","forth","ftl","gherkin","glsl","golang","groovy","haml","handlebars","haskell","haxe","html","html_ruby","ini","jack","jade","java","javascript","json","jsoniq","jsp","jsx","julia","latex","less","liquid","lisp","livescript","logiql","lsl","lua","luapage","lucene","makefile","markdown","matlab","mel","mushcode","mysql","nix","objectivec","ocaml","pascal","perl","pgsql","php","plain_text","powershell","prolog","properties","protobuf","python","r","rdoc","rhtml","ruby","rust","sass","scad","scala","scheme","scss","sh","sjs","smarty","snippets","soy_template","space","sql","stylus","svg","tcl","tex","text","textile","toml","twig","typescript","vala","vbscript","velocity","verilog","vhdl","xml","xquery","yaml"])
 C.xD=I.uL([])
 C.dk=I.uL([null,"emacs","vim"])
+C.JK=I.uL(["css","dart","html","javascript"])
+C.eD=new H.LP(4,{css:".text-layer {\n    font-family: Monaco, \"Courier New\", monospace;\n    font-size: 12pX;\n    cursor: text;\n}\n\n.blinker {\n    animation-duration: 1s;\n    animation-name: blink;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n    animation-timing-function: linear;\n}\n\n@keyframes blink {\n    0% {\n        opacity: 0;\n    }\n    40% {\n        opacity: 0;\n    }\n    40.5% {\n        opacity: 1\n    }\n    100% {\n        opacity: 1\n    }\n}\n",dart:"// Go ahead and modify this example.\n\nimport \"dart:html\";\n\n// Computes the nth Fibonacci number.\nint fibonacci(int n) {\n  if (n < 2) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// Displays a Fibonacci number.\nvoid main() {\n  int i = 20;\n  String message = \"fibonacci($i) = ${fibonacci(i)}\";\n\n  // This example uses HTML to display the result and it will appear\n  // in a nested HTML frame (an iframe).\n  document.body.append(new HeadingElement.h1()..appendText(message));\n}\n",html:"<!DOCTYPE html>\n<html>\n    <head>\n\n    <style type=\"text/css\">\n        .text-layer {\n            font-family: Monaco, \"Courier New\", monospace;\n            font-size: 12px;\n            cursor: text;\n        }\n    </style>\n\n    </head>\n    <body>\n        <h1 style=\"color:red\">Juhu Kinners</h1>\n    </body>\n</html>\n",javascript:"function foo(items, nada) {\n    for (var i=0; i<items.length; i++) {\n        alert(items[i] + \"juhu\\n\");\n    } // Real Tab.\n}\n"},C.JK)
 C.Ka=new H.GD("call")
 C.q0=H.Kx('Dg')
 C.Yx=H.Kx('Pg')
@@ -4504,6 +4559,7 @@ I.$lazy($,"editor","km","fw",function(){var z=document.querySelector("#editor")
 $.DG.toString
 return new B.KD(null,null,null,null,null,null,null,null,null,J.UQ($.cM(),"ace").V7("edit",[z]),null)})
 I.$lazy($,"controls","Fn","qW",function(){return document.querySelector("#controls")})
+I.$lazy($,"modesSelect","Gg","aA",function(){return document.createElement("select",null)})
 I.$lazy($,"_Object","xV","MQ",function(){return J.UQ($.cM(),"Object")})
 I.$lazy($,"scheduleImmediateClosure","lI","ej",function(){return P.xg()})
 I.$lazy($,"_toStringVisiting","nM","Ex",function(){return[]})
@@ -4513,7 +4569,7 @@ I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsol
 I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(a){this.o=a}})
 
 init.functionAliases={}
-init.metadata=["object","sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"NT"},{func:"wl",ret:P.E4,args:[E.jT]},"a",{func:"lc",ret:P.E4,args:[E.St]},"c",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Gl",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},"callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"bh",args:[null,null]},{func:"zx",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"b3",args:[null,null,null,null]},"_",{func:"Ho",args:[P.qU],opt:[P.zM]},"proxy","module","editor","session","pos","prefix",{func:"du",args:[null,null,null,null,P.r7]},"results",{func:"mR",args:[[P.zM,E.St]]},"theError","theStackTrace",{func:"rf",args:[P.a]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","element",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Cu",ret:P.qU,args:[P.KN]},];$=null
+init.metadata=["object","sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"NT"},{func:"wl",ret:P.E4,args:[E.jT]},"a",{func:"lc",ret:P.E4,args:[E.St]},"c",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Gl",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},"callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"bh",args:[null,null]},"key",{func:"zx",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"b3",args:[null,null,null,null]},"_",{func:"Ho",args:[P.qU],opt:[P.zM]},"proxy","module","editor","session","pos","prefix",{func:"du",args:[null,null,null,null,P.r7]},"results",{func:"mR",args:[[P.zM,E.St]]},"theError","theStackTrace",{func:"rf",args:[P.a]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","element",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Cu",ret:P.qU,args:[P.KN]},];$=null
 I = I.$finishIsolateConstructor(I)
 $=new I()
 function convertToFastObject(a){function MyClass(){}MyClass.prototype=a
@@ -4872,12 +4928,12 @@ $desc=$collectedClasses.Fs
 if($desc instanceof Array)$desc=$desc[1]
 Fs.prototype=$desc
 Fs.prototype.gt5=function(receiver){return receiver.type}
-function hY(){}hY.builtin$cls="hY"
-if(!"name" in hY)hY.name="hY"
-$desc=$collectedClasses.hY
+function Ty(){}Ty.builtin$cls="Ty"
+if(!"name" in Ty)Ty.name="Ty"
+$desc=$collectedClasses.Ty
 if($desc instanceof Array)$desc=$desc[1]
-hY.prototype=$desc
-hY.prototype.gkc=function(receiver){return receiver.error}
+Ty.prototype=$desc
+Ty.prototype.gkc=function(receiver){return receiver.error}
 function ea(){}ea.builtin$cls="ea"
 if(!"name" in ea)ea.name="ea"
 $desc=$collectedClasses.ea
@@ -6296,6 +6352,29 @@ $desc=$collectedClasses.ku
 if($desc instanceof Array)$desc=$desc[1]
 ku.prototype=$desc
 ku.prototype.gx6=function(){return this.x6}
+function ys(){}ys.builtin$cls="ys"
+if(!"name" in ys)ys.name="ys"
+$desc=$collectedClasses.ys
+if($desc instanceof Array)$desc=$desc[1]
+ys.prototype=$desc
+function LP(B,HV,tc){this.B=B
+this.HV=HV
+this.tc=tc}LP.builtin$cls="LP"
+if(!"name" in LP)LP.name="LP"
+$desc=$collectedClasses.LP
+if($desc instanceof Array)$desc=$desc[1]
+LP.prototype=$desc
+LP.prototype.gB=function(receiver){return this.B}
+function hY(a){this.a=a}hY.builtin$cls="hY"
+if(!"name" in hY)hY.name="hY"
+$desc=$collectedClasses.hY
+if($desc instanceof Array)$desc=$desc[1]
+hY.prototype=$desc
+function XR(Y3){this.Y3=Y3}XR.builtin$cls="XR"
+if(!"name" in XR)XR.name="XR"
+$desc=$collectedClasses.XR
+if($desc instanceof Array)$desc=$desc[1]
+XR.prototype=$desc
 function LI(lK,uk,xI,rq,FX,Nc){this.lK=lK
 this.uk=uk
 this.xI=xI
@@ -6520,12 +6599,17 @@ if(!"name" in OJ)OJ.name="OJ"
 $desc=$collectedClasses.OJ
 if($desc instanceof Array)$desc=$desc[1]
 OJ.prototype=$desc
+function KQ(a){this.a=a}KQ.builtin$cls="KQ"
+if(!"name" in KQ)KQ.name="KQ"
+$desc=$collectedClasses.KQ
+if($desc instanceof Array)$desc=$desc[1]
+KQ.prototype=$desc
 function QZ(a){this.a=a}QZ.builtin$cls="QZ"
 if(!"name" in QZ)QZ.name="QZ"
 $desc=$collectedClasses.QZ
 if($desc instanceof Array)$desc=$desc[1]
 QZ.prototype=$desc
-function eI(a){this.a=a}eI.builtin$cls="eI"
+function eI(){}eI.builtin$cls="eI"
 if(!"name" in eI)eI.name="eI"
 $desc=$collectedClasses.eI
 if($desc instanceof Array)$desc=$desc[1]
@@ -7186,9 +7270,9 @@ if(!"name" in LG)LG.name="LG"
 $desc=$collectedClasses.LG
 if($desc instanceof Array)$desc=$desc[1]
 LG.prototype=$desc
-function Sw(v5,av,HV,qT){this.v5=v5
+function Sw(v5,av,eZ,qT){this.v5=v5
 this.av=av
-this.HV=HV
+this.eZ=eZ
 this.qT=qT}Sw.builtin$cls="Sw"
 if(!"name" in Sw)Sw.name="Sw"
 $desc=$collectedClasses.Sw
@@ -7525,4 +7609,4 @@ if(!"name" in Ip)Ip.name="Ip"
 $desc=$collectedClasses.Ip
 if($desc instanceof Array)$desc=$desc[1]
 Ip.prototype=$desc
-return[qE,Gh,rK,fY,Mr,lJ,ct,nB,i3,it,Az,QP,IF,n6,Ny,nx,QQ,MA,y4,d7,Um,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,iG,jP,FO,xf,Vb,ST,tb,Sg,pA,Mi,BW,Ln,HL,In,wP,eP,AL,Og,M6,El,mC,SV,aB,fJ,Ih,D8,Vh,rC,ZY,cx,Ee,Qb,PG,F3,xI,Aj,oU,eY,KV,BH,mh,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,GH,bX,A6,MC,Mx,j2,Ea,lp,kd,I0,yN,Cp,ua,zD,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,BT,yY,kJ,FB,V7,FH,y6,RH,Kn,Z2,OR,BR,vw,aG,J6,K5,Xg,UM,hq,r0,yp,Eh,Mq,nK,Nc,rj,Zv,Q7,hF,yK,Y0,ZJ,mU,ph,IT,y5,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,W1,HC,wf,TU,ih,Nd,zp,DD,lu,tk,me,oB,Ah,yu,MI,Ub,bM,eW,um,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,cs,mO,To,NJ,qI,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,jk,Rk,Eo,Pe,o4,ZD,vt,wD,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,l4,Et,np,Pi,qO,xt,cO,P0,xl,Xr,Sl,Qm,bf,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,bU,VA,O,PK,JO,O2,aX,NY,cC,RA,IY,JH,jl,Vg,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,Eq,lb,tD,hJ,cu,dC,wN,VX,jT,cj,MW,St,hL,OJ,QZ,eI,KY,h7,Ku,kL,bn,Zs,Gn,rk,uo,KD,C5,VB,Lk,Yj,GN,PV,Jp,mc,XW,fs,jq,WI,aL,a7,i1,xy,MH,A8,SU,GD,C6,Ca,b8,VN,ff,Pf,Zf,vs,da,pV,U7,rH,cX,ZL,rq,RW,YP,jZ,FZ,OM,cb,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,v1,uR,YR,fB,t3,m0,pK,R8,hj,MK,pQ,FG,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,b6,tj,zQ,u3,mW,lD,LG,Sw,o0,Ma,Vj,Y2,CL,a2,fR,iP,CP,a6,P7,DW,Ge,LK,OY,bJ,mp,ub,ds,lj,UV,VS,t7,HG,eV,kM,KN,An,zM,c8,lf,a,mE,qU,Rn,wv,zL,ec,I2,RO,Cq,xC,Pb,W9,IU,E4,Xb,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip]}
+return[qE,Gh,rK,fY,Mr,lJ,ct,nB,i3,it,Az,QP,IF,n6,Ny,nx,QQ,MA,y4,d7,Um,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,cv,Fs,Ty,ea,D0,as,hH,Aa,u5,Yu,iG,jP,FO,xf,Vb,ST,tb,Sg,pA,Mi,BW,Ln,HL,In,wP,eP,AL,Og,M6,El,mC,SV,aB,fJ,Ih,D8,Vh,rC,ZY,cx,Ee,Qb,PG,F3,xI,Aj,oU,eY,KV,BH,mh,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,GH,bX,A6,MC,Mx,j2,Ea,lp,kd,I0,yN,Cp,ua,zD,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,BT,yY,kJ,FB,V7,FH,y6,RH,Kn,Z2,OR,BR,vw,aG,J6,K5,Xg,UM,hq,r0,yp,Eh,Mq,nK,Nc,rj,Zv,Q7,hF,yK,Y0,ZJ,mU,ph,IT,y5,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,W1,HC,wf,TU,ih,Nd,zp,DD,lu,tk,me,oB,Ah,yu,MI,Ub,bM,eW,um,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,cs,mO,To,NJ,qI,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,jk,Rk,Eo,Pe,o4,ZD,vt,wD,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,l4,Et,np,Pi,qO,xt,cO,P0,xl,Xr,Sl,Qm,bf,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,bU,VA,O,PK,JO,O2,aX,NY,cC,RA,IY,JH,jl,Vg,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,ys,LP,hY,XR,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,Eq,lb,tD,hJ,cu,dC,wN,VX,jT,cj,MW,St,hL,OJ,KQ,QZ,eI,KY,h7,Ku,kL,bn,Zs,Gn,rk,uo,KD,C5,VB,Lk,Yj,GN,PV,Jp,mc,XW,fs,jq,WI,aL,a7,i1,xy,MH,A8,SU,GD,C6,Ca,b8,VN,ff,Pf,Zf,vs,da,pV,U7,rH,cX,ZL,rq,RW,YP,jZ,FZ,OM,cb,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,v1,uR,YR,fB,t3,m0,pK,R8,hj,MK,pQ,FG,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,b6,tj,zQ,u3,mW,lD,LG,Sw,o0,Ma,Vj,Y2,CL,a2,fR,iP,CP,a6,P7,DW,Ge,LK,OY,bJ,mp,ub,ds,lj,UV,VS,t7,HG,eV,kM,KN,An,zM,c8,lf,a,mE,qU,Rn,wv,zL,ec,I2,RO,Cq,xC,Pb,W9,IU,E4,Xb,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip]}
