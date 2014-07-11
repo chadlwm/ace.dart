@@ -1616,20 +1616,18 @@ z=$.fw()
 y=new B.Gn(J.UQ(J.UQ($.cM(),"ace"),"config"),null).Eu("theme","ace/theme/chrome")
 x=new B.WI("ace/theme/chrome",null,y)
 x.ea(y)
-z.toString
-y=x.cs
-y=y!=null?y:"ace/theme/chrome"
-z.cs.V7("setTheme",[y])
-y=z.cs.V7("getSession",null)
+z.sdL(x)
+x=z.cs.V7("getSession",null)
 $.DG.toString
-new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,y,null).sFW(0,B.Vx("ace/mode/dart"))
+new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,x,null).sFW(0,B.Vx("ace/mode/dart"))
 z.cs.V7("setValue",["main() {\n  var x = \"All this is syntax highlighted\";          \n}\n",0])
 z=$.fw().cs.V7("getSession",null)
-y=[]
-C.Nm.FV(y,H.VM(new H.A8([C.M7,C.AT],B.Np()),[null,null]).ez(0,P.En()))
-z.V7("setAnnotations",[H.VM(new P.Tz(y),[null])])
+x=[]
+C.Nm.FV(x,H.VM(new H.A8([C.M7,C.AT],B.Np()),[null,null]).ez(0,P.En()))
+z.V7("setAnnotations",[H.VM(new P.Tz(x),[null])])
 D.Xu()
 $.qW().appendChild(D.cw())
+$.qW().appendChild(D.Vv())
 $.qW().appendChild(D.TP())},"$0","HA",0,0,10],
 Xu:function(){var z,y,x
 z=$.DG.Od("ace/ext/language_tools")
@@ -1671,6 +1669,22 @@ y.textContent="Mode "
 v.appendChild(y)
 v.appendChild(z)
 return v},
+Vv:function(){var z,y,x,w,v
+z=document.createElement("select",null)
+for(y=new H.a7(C.Gq,32,0,null);y.G();){x=y.lo
+w=W.oK("","",null,!1)
+w.textContent=x
+w.value=x
+z.appendChild(w)}y=J.RE(z)
+y.sP(z,"chrome")
+y=y.gi9(z)
+H.VM(new W.xC(0,y.uv,y.Ph,W.VF(new D.KY(z)),y.Sg),[H.Kp(y,0)]).Zz()
+v=document.createElement("div",null)
+y=document.createElement("span",null)
+y.textContent="Theme "
+v.appendChild(y)
+v.appendChild(z)
+return v},
 OJ:{
 "^":"Tp:39;",
 $4:function(a,b,c,d){return P.Ab([C.c5],null)},
@@ -1695,6 +1709,17 @@ z=$.fw().cs.V7("getSession",null)
 y="ace/mode/"+H.d(J.Vm(this.a))
 $.DG.toString
 new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,z,null).sFW(0,B.Vx(y))},"$1",null,2,0,null,40,"call"],
+$isEH:true},
+KY:{
+"^":"Tp:32;a",
+$1:[function(a){var z,y,x
+z=$.fw()
+y="ace/theme/"+H.d(J.Vm(this.a))
+$.DG.toString
+x=new B.Gn(J.UQ(J.UQ($.cM(),"ace"),"config"),null).Eu("theme",y)
+y=new B.WI(y,null,x)
+y.ea(x)
+z.sdL(y)},"$1",null,2,0,null,40,"call"],
 $isEH:true}},1],["","",,B,{
 "^":"",
 yX:function(a){var z=P.uw($.MQ(),null)
@@ -1770,6 +1795,9 @@ return P.pH(z,!1)},
 bu:function(a){return this.cs.V7("toString",null)}},
 KD:{
 "^":"kL;Au,MG,Mn,b2,Hu,Xy,Dx,ye,Df,cs,cH",
+sdL:function(a){var z=a.cs
+z=z!=null?z:a.Ii
+this.cs.V7("setTheme",[z])},
 gP:function(a){return this.cs.V7("getValue",null)},
 cN:function(){var z,y
 z=H.VM([],[P.b8])
@@ -3413,7 +3441,7 @@ iM:function(a,b){return C.CD.iM(this.y3,b.gy3())},
 gEo:function(a){return this.y3},
 bu:function(a){var z,y,x,w,v,u,t,s
 z=this.aL
-y=P.Gq(z?H.o2(this).getUTCFullYear()+0:H.o2(this).getFullYear()+0)
+y=P.tc(z?H.o2(this).getUTCFullYear()+0:H.o2(this).getFullYear()+0)
 x=P.h0(z?H.o2(this).getUTCMonth()+1:H.o2(this).getMonth()+1)
 w=P.h0(z?H.o2(this).getUTCDate()+0:H.o2(this).getDate()+0)
 v=P.h0(z?H.o2(this).getUTCHours()+0:H.o2(this).getHours()+0)
@@ -3426,7 +3454,7 @@ RM:function(a,b){if(Math.abs(a)>8640000000000000)throw H.b(P.u(a))},
 $isiP:true,
 static:{"^":"Oj,Vp,Ej,p2,ch,QC,Px,Yp,kc,Gi,Fz,cR,E0,Ke,Cg,Nr,bm,FI,Kz,ek,yf,Fk",Wu:function(a,b){var z=new P.iP(a,b)
 z.RM(a,b)
-return z},Gq:function(a){var z,y
+return z},tc:function(a){var z,y
 z=Math.abs(a)
 y=a<0?"-":""
 if(z>=1000)return""+a
@@ -3714,7 +3742,7 @@ $isQV:true,
 $asQV:function(){return[W.KV]},
 $isXj:true,
 "%":"NodeList|RadioNodeList"},
-KY:{
+mh:{
 "^":"qE;t5:type=",
 "%":"HTMLOListElement"},
 G7:{
@@ -4425,6 +4453,7 @@ C.hQ=function(hooks) {
 I.uL=function(a){a.immutable$list=init
 a.fixed$length=init
 return a}
+C.Gq=I.uL(["ambiance","chaos","chrome","clouds","clouds_midnight","cobalt","crimson_editor","dawn","dreamweaver","eclipse","github","idle_fingers","katzenmilch","kr_theme","kuroir","merbivore","merbivore_soft","mono_industrial","monokai","pastel_on_dark","solarized_dark","solarized_light","terminal","textmate","tomorrow","tomorrow_night","tomorrow_night_blue","tomorrow_night_bright","tomorrow_night_eighties","twilight","vibrant_ink","xcode"])
 C.yg=I.uL(["abap","actionscript","ada","apache_conf","applescript","asciidoc","assembly_x86","autohotkey","batchfile","c9search","c_cpp","cirru","clojure","cobol","coffee","coldfusion","csharp","css","curly","d","dart","diff","django","dockerfile","dot","ejs","erlang","forth","ftl","gherkin","glsl","golang","groovy","haml","handlebars","haskell","haxe","html","html_ruby","ini","jack","jade","java","javascript","json","jsoniq","jsp","jsx","julia","latex","less","liquid","lisp","livescript","logiql","lsl","lua","luapage","lucene","makefile","markdown","matlab","mel","mushcode","mysql","nix","objectivec","ocaml","pascal","perl","pgsql","php","plain_text","powershell","prolog","properties","protobuf","python","r","rdoc","rhtml","ruby","rust","sass","scad","scala","scheme","scss","sh","sjs","smarty","snippets","soy_template","space","sql","stylus","svg","tcl","tex","text","textile","toml","twig","typescript","vala","vbscript","velocity","verilog","vhdl","xml","xquery","yaml"])
 C.xD=I.uL([])
 C.dk=I.uL([null,"emacs","vim"])

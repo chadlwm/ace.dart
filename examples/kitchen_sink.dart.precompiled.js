@@ -1616,20 +1616,18 @@ z=$.fw()
 y=new B.Gn(J.UQ(J.UQ($.cM(),"ace"),"config"),null).Eu("theme","ace/theme/chrome")
 x=new B.WI("ace/theme/chrome",null,y)
 x.ea(y)
-z.toString
-y=x.cs
-y=y!=null?y:"ace/theme/chrome"
-z.cs.V7("setTheme",[y])
-y=z.cs.V7("getSession",null)
+z.sdL(x)
+x=z.cs.V7("getSession",null)
 $.DG.toString
-new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,y,null).sFW(0,B.Vx("ace/mode/dart"))
+new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,x,null).sFW(0,B.Vx("ace/mode/dart"))
 z.cs.V7("setValue",["main() {\n  var x = \"All this is syntax highlighted\";          \n}\n",0])
 z=$.fw().cs.V7("getSession",null)
-y=[]
-C.Nm.FV(y,H.VM(new H.A8([C.M7,C.AT],B.Np()),[null,null]).ez(0,P.En()))
-z.V7("setAnnotations",[H.VM(new P.Tz(y),[null])])
+x=[]
+C.Nm.FV(x,H.VM(new H.A8([C.M7,C.AT],B.Np()),[null,null]).ez(0,P.En()))
+z.V7("setAnnotations",[H.VM(new P.Tz(x),[null])])
 D.Xu()
 $.qW().appendChild(D.cw())
+$.qW().appendChild(D.Vv())
 $.qW().appendChild(D.TP())},"$0","HA",0,0,10],
 Xu:function(){var z,y,x
 z=$.DG.Od("ace/ext/language_tools")
@@ -1671,6 +1669,22 @@ y.textContent="Mode "
 v.appendChild(y)
 v.appendChild(z)
 return v},
+Vv:function(){var z,y,x,w,v
+z=document.createElement("select",null)
+for(y=new H.a7(C.Gq,32,0,null);y.G();){x=y.lo
+w=W.oK("","",null,!1)
+w.textContent=x
+w.value=x
+z.appendChild(w)}y=J.RE(z)
+y.sP(z,"chrome")
+y=y.gi9(z)
+H.VM(new W.xC(0,y.uv,y.Ph,W.VF(new D.KY(z)),y.Sg),[H.Kp(y,0)]).Zz()
+v=document.createElement("div",null)
+y=document.createElement("span",null)
+y.textContent="Theme "
+v.appendChild(y)
+v.appendChild(z)
+return v},
 OJ:{
 "^":"Tp:39;",
 $4:function(a,b,c,d){return P.Ab([C.c5],null)},
@@ -1695,6 +1709,17 @@ z=$.fw().cs.V7("getSession",null)
 y="ace/mode/"+H.d(J.Vm(this.a))
 $.DG.toString
 new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,z,null).sFW(0,B.Vx(y))},"$1",null,2,0,null,40,"call"],
+$isEH:true},
+KY:{
+"^":"Tp:32;a",
+$1:[function(a){var z,y,x
+z=$.fw()
+y="ace/theme/"+H.d(J.Vm(this.a))
+$.DG.toString
+x=new B.Gn(J.UQ(J.UQ($.cM(),"ace"),"config"),null).Eu("theme",y)
+y=new B.WI(y,null,x)
+y.ea(x)
+z.sdL(y)},"$1",null,2,0,null,40,"call"],
 $isEH:true}},1],["","",,B,{
 "^":"",
 yX:function(a){var z=P.uw($.MQ(),null)
@@ -1770,6 +1795,9 @@ return P.pH(z,!1)},
 bu:function(a){return this.cs.V7("toString",null)}},
 KD:{
 "^":"kL;Au,MG,Mn,b2,Hu,Xy,Dx,ye,Df,cs,cH",
+sdL:function(a){var z=a.cs
+z=z!=null?z:a.Ii
+this.cs.V7("setTheme",[z])},
 gP:function(a){return this.cs.V7("getValue",null)},
 cN:function(){var z,y
 z=H.VM([],[P.b8])
@@ -3413,7 +3441,7 @@ iM:function(a,b){return C.CD.iM(this.y3,b.gy3())},
 gEo:function(a){return this.y3},
 bu:function(a){var z,y,x,w,v,u,t,s
 z=this.aL
-y=P.Gq(z?H.o2(this).getUTCFullYear()+0:H.o2(this).getFullYear()+0)
+y=P.tc(z?H.o2(this).getUTCFullYear()+0:H.o2(this).getFullYear()+0)
 x=P.h0(z?H.o2(this).getUTCMonth()+1:H.o2(this).getMonth()+1)
 w=P.h0(z?H.o2(this).getUTCDate()+0:H.o2(this).getDate()+0)
 v=P.h0(z?H.o2(this).getUTCHours()+0:H.o2(this).getHours()+0)
@@ -3426,7 +3454,7 @@ RM:function(a,b){if(Math.abs(a)>8640000000000000)throw H.b(P.u(a))},
 $isiP:true,
 static:{"^":"Oj,Vp,Ej,p2,ch,QC,Px,Yp,kc,Gi,Fz,cR,E0,Ke,Cg,Nr,bm,FI,Kz,ek,yf,Fk",Wu:function(a,b){var z=new P.iP(a,b)
 z.RM(a,b)
-return z},Gq:function(a){var z,y
+return z},tc:function(a){var z,y
 z=Math.abs(a)
 y=a<0?"-":""
 if(z>=1000)return""+a
@@ -3714,7 +3742,7 @@ $isQV:true,
 $asQV:function(){return[W.KV]},
 $isXj:true,
 "%":"NodeList|RadioNodeList"},
-KY:{
+mh:{
 "^":"qE;t5:type=",
 "%":"HTMLOListElement"},
 G7:{
@@ -4425,6 +4453,7 @@ C.hQ=function(hooks) {
 I.uL=function(a){a.immutable$list=init
 a.fixed$length=init
 return a}
+C.Gq=I.uL(["ambiance","chaos","chrome","clouds","clouds_midnight","cobalt","crimson_editor","dawn","dreamweaver","eclipse","github","idle_fingers","katzenmilch","kr_theme","kuroir","merbivore","merbivore_soft","mono_industrial","monokai","pastel_on_dark","solarized_dark","solarized_light","terminal","textmate","tomorrow","tomorrow_night","tomorrow_night_blue","tomorrow_night_bright","tomorrow_night_eighties","twilight","vibrant_ink","xcode"])
 C.yg=I.uL(["abap","actionscript","ada","apache_conf","applescript","asciidoc","assembly_x86","autohotkey","batchfile","c9search","c_cpp","cirru","clojure","cobol","coffee","coldfusion","csharp","css","curly","d","dart","diff","django","dockerfile","dot","ejs","erlang","forth","ftl","gherkin","glsl","golang","groovy","haml","handlebars","haskell","haxe","html","html_ruby","ini","jack","jade","java","javascript","json","jsoniq","jsp","jsx","julia","latex","less","liquid","lisp","livescript","logiql","lsl","lua","luapage","lucene","makefile","markdown","matlab","mel","mushcode","mysql","nix","objectivec","ocaml","pascal","perl","pgsql","php","plain_text","powershell","prolog","properties","protobuf","python","r","rdoc","rhtml","ruby","rust","sass","scad","scala","scheme","scss","sh","sjs","smarty","snippets","soy_template","space","sql","stylus","svg","tcl","tex","text","textile","toml","twig","typescript","vala","vbscript","velocity","verilog","vhdl","xml","xquery","yaml"])
 C.xD=I.uL([])
 C.dk=I.uL([null,"emacs","vim"])
@@ -5098,12 +5127,12 @@ if(!"name" in BH)BH.name="BH"
 $desc=$collectedClasses.BH
 if($desc instanceof Array)$desc=$desc[1]
 BH.prototype=$desc
-function KY(){}KY.builtin$cls="KY"
-if(!"name" in KY)KY.name="KY"
-$desc=$collectedClasses.KY
+function mh(){}mh.builtin$cls="mh"
+if(!"name" in mh)mh.name="mh"
+$desc=$collectedClasses.mh
 if($desc instanceof Array)$desc=$desc[1]
-KY.prototype=$desc
-KY.prototype.gt5=function(receiver){return receiver.type}
+mh.prototype=$desc
+mh.prototype.gt5=function(receiver){return receiver.type}
 function G7(){}G7.builtin$cls="G7"
 if(!"name" in G7)G7.name="G7"
 $desc=$collectedClasses.G7
@@ -5567,11 +5596,11 @@ if(!"name" in wf)wf.name="wf"
 $desc=$collectedClasses.wf
 if($desc instanceof Array)$desc=$desc[1]
 wf.prototype=$desc
-function TC(){}TC.builtin$cls="TC"
-if(!"name" in TC)TC.name="TC"
-$desc=$collectedClasses.TC
+function TU(){}TU.builtin$cls="TU"
+if(!"name" in TU)TU.name="TU"
+$desc=$collectedClasses.TU
 if($desc instanceof Array)$desc=$desc[1]
-TC.prototype=$desc
+TU.prototype=$desc
 function ih(){}ih.builtin$cls="ih"
 if(!"name" in ih)ih.name="ih"
 $desc=$collectedClasses.ih
@@ -5642,11 +5671,11 @@ if(!"name" in eW)eW.name="eW"
 $desc=$collectedClasses.eW
 if($desc instanceof Array)$desc=$desc[1]
 eW.prototype=$desc
-function Qy(){}Qy.builtin$cls="Qy"
-if(!"name" in Qy)Qy.name="Qy"
-$desc=$collectedClasses.Qy
+function um(){}um.builtin$cls="um"
+if(!"name" in um)um.name="um"
+$desc=$collectedClasses.um
 if($desc instanceof Array)$desc=$desc[1]
-Qy.prototype=$desc
+um.prototype=$desc
 function ju(){}ju.builtin$cls="ju"
 if(!"name" in ju)ju.name="ju"
 $desc=$collectedClasses.ju
@@ -5718,11 +5747,11 @@ if(!"name" in Gr)Gr.name="Gr"
 $desc=$collectedClasses.Gr
 if($desc instanceof Array)$desc=$desc[1]
 Gr.prototype=$desc
-function tc(){}tc.builtin$cls="tc"
-if(!"name" in tc)tc.name="tc"
-$desc=$collectedClasses.tc
+function cs(){}cs.builtin$cls="cs"
+if(!"name" in cs)cs.name="cs"
+$desc=$collectedClasses.cs
 if($desc instanceof Array)$desc=$desc[1]
-tc.prototype=$desc
+cs.prototype=$desc
 function mO(){}mO.builtin$cls="mO"
 if(!"name" in mO)mO.name="mO"
 $desc=$collectedClasses.mO
@@ -6501,6 +6530,11 @@ if(!"name" in eI)eI.name="eI"
 $desc=$collectedClasses.eI
 if($desc instanceof Array)$desc=$desc[1]
 eI.prototype=$desc
+function KY(a){this.a=a}KY.builtin$cls="KY"
+if(!"name" in KY)KY.name="KY"
+$desc=$collectedClasses.KY
+if($desc instanceof Array)$desc=$desc[1]
+KY.prototype=$desc
 function h7(){}h7.builtin$cls="h7"
 if(!"name" in h7)h7.name="h7"
 $desc=$collectedClasses.h7
@@ -7491,4 +7525,4 @@ if(!"name" in Ip)Ip.name="Ip"
 $desc=$collectedClasses.Ip
 if($desc instanceof Array)$desc=$desc[1]
 Ip.prototype=$desc
-return[qE,Gh,rK,fY,Mr,lJ,ct,nB,i3,it,Az,QP,IF,n6,Ny,nx,QQ,MA,y4,d7,Um,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,iG,jP,FO,xf,Vb,ST,tb,Sg,pA,Mi,BW,Ln,HL,In,wP,eP,AL,Og,M6,El,mC,SV,aB,fJ,Ih,D8,Vh,rC,ZY,cx,Ee,Qb,PG,F3,xI,Aj,oU,eY,KV,BH,KY,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,GH,bX,A6,MC,Mx,j2,Ea,lp,kd,I0,yN,Cp,ua,zD,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,BT,yY,kJ,FB,V7,FH,y6,RH,Kn,Z2,OR,BR,vw,aG,J6,K5,Xg,UM,hq,r0,yp,Eh,Mq,nK,Nc,rj,Zv,Q7,hF,yK,Y0,ZJ,mU,ph,IT,y5,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,W1,HC,wf,TC,ih,Nd,zp,DD,lu,tk,me,oB,Ah,yu,MI,Ub,bM,eW,Qy,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,tc,mO,To,NJ,qI,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,jk,Rk,Eo,Pe,o4,ZD,vt,wD,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,l4,Et,np,Pi,qO,xt,cO,P0,xl,Xr,Sl,Qm,bf,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,bU,VA,O,PK,JO,O2,aX,NY,cC,RA,IY,JH,jl,Vg,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,Eq,lb,tD,hJ,cu,dC,wN,VX,jT,cj,MW,St,hL,OJ,QZ,eI,h7,Ku,kL,bn,Zs,Gn,rk,uo,KD,C5,VB,Lk,Yj,GN,PV,Jp,mc,XW,fs,jq,WI,aL,a7,i1,xy,MH,A8,SU,GD,C6,Ca,b8,VN,ff,Pf,Zf,vs,da,pV,U7,rH,cX,ZL,rq,RW,YP,jZ,FZ,OM,cb,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,v1,uR,YR,fB,t3,m0,pK,R8,hj,MK,pQ,FG,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,b6,tj,zQ,u3,mW,lD,LG,Sw,o0,Ma,Vj,Y2,CL,a2,fR,iP,CP,a6,P7,DW,Ge,LK,OY,bJ,mp,ub,ds,lj,UV,VS,t7,HG,eV,kM,KN,An,zM,c8,lf,a,mE,qU,Rn,wv,zL,ec,I2,RO,Cq,xC,Pb,W9,IU,E4,Xb,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip]}
+return[qE,Gh,rK,fY,Mr,lJ,ct,nB,i3,it,Az,QP,IF,n6,Ny,nx,QQ,MA,y4,d7,Um,He,mN,vH,xO,Em,NW,rV,Wy,QF,Ec,cm,Nh,cv,Fs,hY,ea,D0,as,hH,Aa,u5,Yu,iG,jP,FO,xf,Vb,ST,tb,Sg,pA,Mi,BW,Ln,HL,In,wP,eP,AL,Og,M6,El,mC,SV,aB,fJ,Ih,D8,Vh,rC,ZY,cx,Ee,Qb,PG,F3,xI,Aj,oU,eY,KV,BH,mh,G7,l9,Ql,wL,bP,mX,SN,HD,ni,rR,qj,nC,KR,ew,GH,bX,A6,MC,Mx,j2,Ea,lp,kd,I0,yN,Cp,ua,zD,Ul,KK,ii,fq,h4,qk,GI,Tb,Iv,BT,yY,kJ,FB,V7,FH,y6,RH,Kn,Z2,OR,BR,vw,aG,J6,K5,Xg,UM,hq,r0,yp,Eh,Mq,nK,Nc,rj,Zv,Q7,hF,yK,Y0,ZJ,mU,ph,IT,y5,nV,ui,D6,DQ,Sm,xL,QU,es,jw,lv,pf,NV,W1,HC,wf,TU,ih,Nd,zp,DD,lu,tk,me,oB,Ah,yu,MI,Ub,bM,eW,um,ju,OE,N9,BA,d0,tp,rE,CC,PQ,uz,Yd,p8,AD,Gr,cs,mO,To,NJ,qI,Pu,rQ,Lx,d5,hy,r8,aS,CG,Kf,jk,Rk,Eo,Pe,o4,ZD,vt,wD,BD,vR,Ja,zI,cB,LQ,yR,HP,fa,l4,Et,np,Pi,qO,xt,cO,P0,xl,Xr,Sl,Qm,bf,ET,df,zU,K8,xj,dE,Zc,dT,Pq,eE,V6,FK,Gv,kn,YE,Ue,iC,is,Q,P,bU,VA,O,PK,JO,O2,aX,NY,cC,RA,IY,JH,jl,Vg,Iy,JM,Ua,ns,yo,Bj,NO,II,fP,X1,HU,oo,OW,Tf,iY,yH,FA,Av,ku,LI,FD,Nv,Cj,u8,Zr,W0,az,vV,Am,XO,dr,TL,KX,uZ,OQ,Tp,Bp,v,Eq,lb,tD,hJ,cu,dC,wN,VX,jT,cj,MW,St,hL,OJ,QZ,eI,KY,h7,Ku,kL,bn,Zs,Gn,rk,uo,KD,C5,VB,Lk,Yj,GN,PV,Jp,mc,XW,fs,jq,WI,aL,a7,i1,xy,MH,A8,SU,GD,C6,Ca,b8,VN,ff,Pf,Zf,vs,da,pV,U7,rH,cX,ZL,rq,RW,YP,jZ,FZ,OM,cb,lz,Rl,Jb,M4,B5,PI,MO,nP,KA,Vo,qB,fI,LV,DS,dp,B3,CR,Qk,v1,uR,YR,fB,t3,m0,pK,R8,hj,MK,pQ,FG,k6,oi,PL,fG,EQ,YB,a1,db,i5,N6,b6,tj,zQ,u3,mW,lD,LG,Sw,o0,Ma,Vj,Y2,CL,a2,fR,iP,CP,a6,P7,DW,Ge,LK,OY,bJ,mp,ub,ds,lj,UV,VS,t7,HG,eV,kM,KN,An,zM,c8,lf,a,mE,qU,Rn,wv,zL,ec,I2,RO,Cq,xC,Pb,W9,IU,E4,Xb,r7,Tz,Wk,DV,Hp,Nz,Jd,QS,b0,Dg,Ob,GV,Pg,fj,Ip]}
