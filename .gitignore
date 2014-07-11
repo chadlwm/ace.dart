@@ -1,7 +1,8 @@
 pubspec.lock
-packages/
+packages
 example/
 test/
 docs/
 build/
+content_shell*
 !examples/packages/
