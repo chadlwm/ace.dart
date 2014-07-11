@@ -1610,7 +1610,7 @@ gEo:function(a){return J.UN(J.le(this.eH),J.le(this.li))},
 bu:function(a){return"Point: ["+H.d(this.eH)+"/"+H.d(this.li)+"]"},
 $ishL:true}}],["","",,D,{
 "^":"",
-QL:[function(){var z,y,x,w
+QL:[function(){var z,y,x
 $.DG=C.LS
 z=$.fw()
 y=new B.Gn(J.UQ(J.UQ($.cM(),"ace"),"config"),null).Eu("theme","ace/theme/chrome")
@@ -1622,16 +1622,15 @@ y=y!=null?y:"ace/theme/chrome"
 z.cs.V7("setTheme",[y])
 y=z.cs.V7("getSession",null)
 $.DG.toString
-x=B.Vx("ace/mode/dart")
-w=x.cs
-y.V7("setMode",[w!=null?w:x.Ii])
+new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,y,null).sFW(0,B.Vx("ace/mode/dart"))
 z.cs.V7("setValue",["main() {\n  var x = \"All this is syntax highlighted\";          \n}\n",0])
 z=$.fw().cs.V7("getSession",null)
 y=[]
 C.Nm.FV(y,H.VM(new H.A8([C.M7,C.AT],B.Np()),[null,null]).ez(0,P.En()))
 z.V7("setAnnotations",[H.VM(new P.Tz(y),[null])])
 D.Xu()
-$.qW().appendChild(D.t0())},"$0","HA",0,0,10],
+$.qW().appendChild(D.cw())
+$.qW().appendChild(D.TP())},"$0","HA",0,0,10],
 Xu:function(){var z,y,x
 z=$.DG.Od("ace/ext/language_tools")
 $.DG.toString
@@ -1641,7 +1640,7 @@ x=P.EF(["enableBasicAutocompletion",!0,"enableSnippets",!0],null,null)
 y.toString
 x=P.bH(x)
 y.cs.V7("setOptions",[x])},
-t0:function(){var z,y,x,w,v,u
+TP:function(){var z,y,x,w,v,u
 z=document.createElement("select",null)
 for(y=new H.a7(C.dk,3,0,null);y.G();){x=y.lo
 w=x==null?"ace":x
@@ -1649,18 +1648,34 @@ v=W.oK("","",null,!1)
 v.textContent=w
 v.value=w
 z.appendChild(v)}y=J.uX(z)
-H.VM(new W.xC(0,y.uv,y.Ph,W.VF(new D.PS(z)),y.Sg),[H.Kp(y,0)]).Zz()
+H.VM(new W.xC(0,y.uv,y.Ph,W.VF(new D.QZ(z)),y.Sg),[H.Kp(y,0)]).Zz()
 u=document.createElement("div",null)
 y=document.createElement("span",null)
-y.textContent="Key binding"
+y.textContent="Key binding "
 u.appendChild(y)
 u.appendChild(z)
 return u},
+cw:function(){var z,y,x,w,v
+z=document.createElement("select",null)
+for(y=new H.a7(C.yg,112,0,null);y.G();){x=y.lo
+w=W.oK("","",null,!1)
+w.textContent=x
+w.value=x
+z.appendChild(w)}y=J.RE(z)
+y.sP(z,"dart")
+y=y.gi9(z)
+H.VM(new W.xC(0,y.uv,y.Ph,W.VF(new D.eI(z)),y.Sg),[H.Kp(y,0)]).Zz()
+v=document.createElement("div",null)
+y=document.createElement("span",null)
+y.textContent="Mode "
+v.appendChild(y)
+v.appendChild(z)
+return v},
 OJ:{
 "^":"Tp:39;",
 $4:function(a,b,c,d){return P.Ab([C.c5],null)},
 $isEH:true},
-PS:{
+QZ:{
 "^":"Tp:32;a",
 $1:[function(a){var z,y,x,w
 z=this.a
@@ -1672,6 +1687,14 @@ z.toString
 w=y.cs
 y=w!=null?w:y.Ii
 z.cs.V7("setKeyboardHandler",[y])},"$1",null,2,0,null,40,"call"],
+$isEH:true},
+eI:{
+"^":"Tp:32;a",
+$1:[function(a){var z,y
+z=$.fw().cs.V7("getSession",null)
+y="ace/mode/"+H.d(J.Vm(this.a))
+$.DG.toString
+new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,z,null).sFW(0,B.Vx(y))},"$1",null,2,0,null,40,"call"],
 $isEH:true}},1],["","",,B,{
 "^":"",
 yX:function(a){var z=P.uw($.MQ(),null)
@@ -1735,6 +1758,9 @@ $isEH:true},
 uo:{
 "^":"kL;b2,JC,xN,kF,D4,IA,ks,dZ,jV,bz,Xb,VB,cs,cH",
 gB:function(a){return this.cs.V7("getLength",null)},
+sFW:function(a,b){var z=b.cs
+z=z!=null?z:b.Ii
+this.cs.V7("setMode",[z])},
 gP:function(a){return this.cs.V7("getValue",null)},
 cN:function(){var z,y
 z=H.VM([],[P.b8])
@@ -3608,7 +3634,7 @@ Az:{
 $isAz:true,
 "%":"Blob|File"},
 IF:{
-"^":"qE;t5:type=,P:value=",
+"^":"qE;t5:type=,P:value%",
 "%":"HTMLButtonElement"},
 nx:{
 "^":"KV;B:length=",
@@ -3648,14 +3674,14 @@ Sg:{
 $isSg:true,
 "%":"ImageData"},
 Mi:{
-"^":"qE;t5:type=,P:value=",
+"^":"qE;t5:type=,P:value%",
 $isKV:true,
 "%":"HTMLInputElement"},
 In:{
 "^":"qE;t5:type=",
 "%":"HTMLKeygenElement"},
 wP:{
-"^":"qE;P:value=",
+"^":"qE;P:value%",
 "%":"HTMLLIElement"},
 Og:{
 "^":"qE;t5:type=",
@@ -3664,7 +3690,7 @@ El:{
 "^":"qE;kc:error=",
 "%":"HTMLAudioElement|HTMLMediaElement|HTMLVideoElement"},
 Qb:{
-"^":"qE;P:value=",
+"^":"qE;P:value%",
 "%":"HTMLMeterElement"},
 KV:{
 "^":"D0;a4:textContent=",
@@ -3695,22 +3721,22 @@ G7:{
 "^":"qE;t5:type=",
 "%":"HTMLObjectElement"},
 Ql:{
-"^":"qE;P:value=",
+"^":"qE;P:value%",
 "%":"HTMLOptionElement"},
 wL:{
-"^":"qE;t5:type=,P:value=",
+"^":"qE;t5:type=,P:value%",
 "%":"HTMLOutputElement"},
 HD:{
-"^":"qE;P:value=",
+"^":"qE;P:value%",
 "%":"HTMLParamElement"},
 KR:{
-"^":"qE;P:value=",
+"^":"qE;P:value%",
 "%":"HTMLProgressElement"},
 j2:{
 "^":"qE;t5:type=",
 "%":"HTMLScriptElement"},
 lp:{
-"^":"qE;B:length=,t5:type=,P:value=",
+"^":"qE;B:length=,t5:type=,P:value%",
 "%":"HTMLSelectElement"},
 yN:{
 "^":"qE;t5:type=",
@@ -3722,7 +3748,7 @@ fq:{
 "^":"qE;t5:type=",
 "%":"HTMLStyleElement"},
 FB:{
-"^":"qE;t5:type=,P:value=",
+"^":"qE;t5:type=,P:value%",
 "%":"HTMLTextAreaElement"},
 K5:{
 "^":"D0;",
@@ -4399,6 +4425,7 @@ C.hQ=function(hooks) {
 I.uL=function(a){a.immutable$list=init
 a.fixed$length=init
 return a}
+C.yg=I.uL(["abap","actionscript","ada","apache_conf","applescript","asciidoc","assembly_x86","autohotkey","batchfile","c9search","c_cpp","cirru","clojure","cobol","coffee","coldfusion","csharp","css","curly","d","dart","diff","django","dockerfile","dot","ejs","erlang","forth","ftl","gherkin","glsl","golang","groovy","haml","handlebars","haskell","haxe","html","html_ruby","ini","jack","jade","java","javascript","json","jsoniq","jsp","jsx","julia","latex","less","liquid","lisp","livescript","logiql","lsl","lua","luapage","lucene","makefile","markdown","matlab","mel","mushcode","mysql","nix","objectivec","ocaml","pascal","perl","pgsql","php","plain_text","powershell","prolog","properties","protobuf","python","r","rdoc","rhtml","ruby","rust","sass","scad","scala","scheme","scss","sh","sjs","smarty","snippets","soy_template","space","sql","stylus","svg","tcl","tex","text","textile","toml","twig","typescript","vala","vbscript","velocity","verilog","vhdl","xml","xquery","yaml"])
 C.xD=I.uL([])
 C.dk=I.uL([null,"emacs","vim"])
 C.Ka=new H.GD("call")
