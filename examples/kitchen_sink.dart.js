@@ -425,14 +425,14 @@ break
 case"log":H.VL(y.t(z,"msg"))
 break
 case"print":if(init.globalState.EF===!0){y=init.globalState.vd
-q=H.Gy(P.EF(["command","print","msg",z],null,null))
+q=H.Gy(P.WN(["command","print","msg",z],null,null))
 y.toString
 self.postMessage(q)}else P.JS(y.t(z,"msg"))
 break
 case"error":throw H.b(y.t(z,"msg"))}},"$2","NB",4,0,null,1,2],
 VL:function(a){var z,y,x,w
 if(init.globalState.EF===!0){y=init.globalState.vd
-x=H.Gy(P.EF(["command","log","msg",a],null,null))
+x=H.Gy(P.WN(["command","log","msg",a],null,null))
 y.toString
 self.postMessage(x)}else try{self.console.log(a)}catch(w){H.Ru(w)
 z=new H.XO(w,null)
@@ -488,7 +488,7 @@ if(this.EF===!0){z=new H.JH()
 this.vd=z
 self.onmessage=function(b,c){return function(d){b(c,d)}}(H.Mg,z)
 self.dartPrint=self.dartPrint||function(b){return function(c){if(self.console&&self.console.log){self.console.log(c)}else{self.postMessage(b(c))}}}(H.wI)}},
-static:{wI:[function(a){return H.Gy(P.EF(["command","print","msg",a],null,null))},"$1","oj",2,0,null,0]}},
+static:{wI:[function(a){return H.Gy(P.WN(["command","print","msg",a],null,null))},"$1","oj",2,0,null,0]}},
 aX:{
 "^":"a;jO,Gx,fW,En<,EE<,Qy,PX,xF?,UF<,C9<,lJ,Jp,M2,mf,pa,x8",
 v8:function(a,b){if(!this.Qy.n(0,a))return
@@ -617,7 +617,7 @@ z=this.Jc()
 if(z==null){if(init.globalState.yc!=null&&init.globalState.i2.x4(init.globalState.yc.jO)&&init.globalState.Ai===!0&&init.globalState.yc.Gx.X5===0)H.vh(P.FM("Program exited with open ReceivePorts."))
 y=init.globalState
 if(y.EF===!0&&y.i2.X5===0&&y.Xz.GL===0){y=y.vd
-x=H.Gy(P.EF(["command","close"],null,null))
+x=H.Gy(P.WN(["command","close"],null,null))
 y.toString
 self.postMessage(x)}return!1}z.VU()
 return!0},
@@ -629,7 +629,7 @@ else try{this.Wu()}catch(x){w=H.Ru(x)
 z=w
 y=new H.XO(x,null)
 w=init.globalState.vd
-v=H.Gy(P.EF(["command","error","msg",H.d(z)+"\n"+H.d(y)],null,null))
+v=H.Gy(P.WN(["command","error","msg",H.d(z)+"\n"+H.d(y)],null,null))
 w.toString
 self.postMessage(v)}}},
 RA:{
@@ -697,7 +697,7 @@ $isEH:true},
 ns:{
 "^":"Iy;Ws,bv,Jz",
 zY:function(a){var z,y
-z=H.Gy(P.EF(["command","message","port",this,"msg",a],null,null))
+z=H.Gy(P.WN(["command","message","port",this,"msg",a],null,null))
 if(init.globalState.EF===!0){init.globalState.vd.toString
 self.postMessage(z)}else{y=init.globalState.XC.t(0,this.Ws)
 if(y!=null)y.postMessage(z)}},
@@ -1667,13 +1667,13 @@ z=$.DG.Od("ace/ext/language_tools")
 $.DG.toString
 z.f0(B.S8(new G.OJ()))
 y=$.fw()
-x=P.EF(["enableBasicAutocompletion",!0,"enableSnippets",!0],null,null)
+x=P.WN(["enableBasicAutocompletion",!0,"enableSnippets",!0],null,null)
 y.toString
 x=P.jT(x)
 y.cs.V7("setOptions",[x])},
 Vs:function(){var z,y,x,w,v
 z=document.createElement("select",null)
-for(y=J.GP(C.eD.gvc());y.G();){x=y.gl()
+for(y=J.GP(C.EF.gvc());y.G();){x=y.gl()
 w=W.oK("","",null,!1)
 w.textContent=x
 w.value=x
@@ -1745,7 +1745,7 @@ KQ:{
 $1:[function(a){var z,y
 z=this.a
 y=J.RE(z)
-$.fw().PC(C.eD.t(0,y.gP(z)),-1)
+$.fw().PC(C.EF.t(0,y.gP(z)),-1)
 J.Fc($.aA(),y.gP(z))},"$1",null,2,0,null,40,"call"],
 $isEH:true},
 QZ:{
@@ -1784,7 +1784,7 @@ $isEH:true}},1],["","",,B,{
 yX:function(a){var z=P.uw($.MQ(),null)
 a.aN(0,new B.Ku(z))
 return z},
-Sr:[function(a){var z=B.yX(P.EF(["value",J.Vm(a)],null,null))
+Sr:[function(a){var z=B.yX(P.WN(["value",J.Vm(a)],null,null))
 a.gUx()
 J.kW(z,"snippet",a.gUx())
 a.gV3()
@@ -2860,7 +2860,7 @@ FG:{
 $1:[function(a){return this.c.FI(this.d,a)},"$1",null,2,0,null,61,"call"],
 $isEH:true}}],["","",,P,{
 "^":"",
-EF:function(a,b,c){return H.B7(a,H.VM(new P.YB(0,null,null,null,null,null,0),[b,c]))},
+WN:function(a,b,c){return H.B7(a,H.VM(new P.YB(0,null,null,null,null,null,0),[b,c]))},
 Fl:function(a,b){return H.VM(new P.YB(0,null,null,null,null,null,0),[a,b])},
 Ou:[function(a,b){return J.de(a,b)},"$2","iv",4,0,21],
 T9:[function(a){return J.v1(a)},"$1","py",2,0,22,23],
@@ -4612,8 +4612,8 @@ C.IU=I.uL(["ambiance","chaos","chrome","clouds","clouds_midnight","cobalt","crim
 C.yg=I.uL(["abap","actionscript","ada","apache_conf","applescript","asciidoc","assembly_x86","autohotkey","batchfile","c9search","c_cpp","cirru","clojure","cobol","coffee","coldfusion","csharp","css","curly","d","dart","diff","django","dockerfile","dot","ejs","erlang","forth","ftl","gherkin","glsl","golang","groovy","haml","handlebars","haskell","haxe","html","html_ruby","ini","jack","jade","java","javascript","json","jsoniq","jsp","jsx","julia","latex","less","liquid","lisp","livescript","logiql","lsl","lua","luapage","lucene","makefile","markdown","matlab","mel","mushcode","mysql","nix","objectivec","ocaml","pascal","perl","pgsql","php","plain_text","powershell","prolog","properties","protobuf","python","r","rdoc","rhtml","ruby","rust","sass","scad","scala","scheme","scss","sh","sjs","smarty","snippets","soy_template","space","sql","stylus","svg","tcl","tex","text","textile","toml","twig","typescript","vala","vbscript","velocity","verilog","vhdl","xml","xquery","yaml"])
 C.xD=I.uL([])
 C.dk=I.uL([null,"emacs","vim"])
-C.JK=I.uL(["css","dart","html","javascript"])
-C.eD=new H.LP(4,{css:".text-layer {\n    font-family: Monaco, \"Courier New\", monospace;\n    font-size: 12pX;\n    cursor: text;\n}\n\n.blinker {\n    animation-duration: 1s;\n    animation-name: blink;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n    animation-timing-function: linear;\n}\n\n@keyframes blink {\n    0% {\n        opacity: 0;\n    }\n    40% {\n        opacity: 0;\n    }\n    40.5% {\n        opacity: 1\n    }\n    100% {\n        opacity: 1\n    }\n}\n",dart:"// Go ahead and modify this example.\n\nimport \"dart:html\";\n\n// Computes the nth Fibonacci number.\nint fibonacci(int n) {\n  if (n < 2) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// Displays a Fibonacci number.\nvoid main() {\n  int i = 20;\n  String message = \"fibonacci($i) = ${fibonacci(i)}\";\n\n  // This example uses HTML to display the result and it will appear\n  // in a nested HTML frame (an iframe).\n  document.body.append(new HeadingElement.h1()..appendText(message));\n}\n",html:"<!DOCTYPE html>\n<html>\n    <head>\n\n    <style type=\"text/css\">\n        .text-layer {\n            font-family: Monaco, \"Courier New\", monospace;\n            font-size: 12px;\n            cursor: text;\n        }\n    </style>\n\n    </head>\n    <body>\n        <h1 style=\"color:red\">Juhu Kinners</h1>\n    </body>\n</html>\n",javascript:"function foo(items, nada) {\n    for (var i=0; i<items.length; i++) {\n        alert(items[i] + \"juhu\\n\");\n    } // Real Tab.\n}\n"},C.JK)
+C.iN=I.uL(["css","dart","html","javascript","typescript"])
+C.EF=new H.LP(5,{css:".text-layer {\n    font-family: Monaco, \"Courier New\", monospace;\n    font-size: 12pX;\n    cursor: text;\n}\n\n.blinker {\n    animation-duration: 1s;\n    animation-name: blink;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n    animation-timing-function: linear;\n}\n\n@keyframes blink {\n    0% {\n        opacity: 0;\n    }\n    40% {\n        opacity: 0;\n    }\n    40.5% {\n        opacity: 1\n    }\n    100% {\n        opacity: 1\n    }\n}\n",dart:"// Go ahead and modify this example.\n\nimport \"dart:html\";\n\n// Computes the nth Fibonacci number.\nint fibonacci(int n) {\n  if (n < 2) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// Displays a Fibonacci number.\nvoid main() {\n  int i = 20;\n  String message = \"fibonacci($i) = ${fibonacci(i)}\";\n\n  // This example uses HTML to display the result and it will appear\n  // in a nested HTML frame (an iframe).\n  document.body.append(new HeadingElement.h1()..appendText(message));\n}\n",html:"<!DOCTYPE html>\n<html>\n    <head>\n\n    <style type=\"text/css\">\n        .text-layer {\n            font-family: Monaco, \"Courier New\", monospace;\n            font-size: 12px;\n            cursor: text;\n        }\n    </style>\n\n    </head>\n    <body>\n        <h1 style=\"color:red\">Juhu Kinners</h1>\n    </body>\n</html>\n",javascript:"function foo(items, nada) {\n    for (var i=0; i<items.length; i++) {\n        alert(items[i] + \"juhu\\n\");\n    } // Real Tab.\n}\n",typescript:"class Greeter {\n  greeting: string;\n  constructor (message: string) {\n    this.greeting = message;\n  }\n  greet() {\n    return \"Hello, \" + this.greeting;\n  }\n}   \n\nvar greeter = new Greeter(\"world\");\n\nvar button = document.createElement('button')\nbutton.innerText = \"Say Hello\"\nbutton.onclick = function() {\n  alert(greeter.greet())\n}\n\ndocument.body.appendChild(button)\n\nclass Snake extends Animal {\n   move() {\n       alert(\"Slithering...\");\n       super(5);\n   }\n}\n\nclass Horse extends Animal {\n   move() {\n       alert(\"Galloping...\");\n       super.move(45);\n   }\n}\n\nmodule Sayings {\n    export class Greeter {\n        greeting: string;\n        constructor (message: string) {\n            this.greeting = message;\n        }\n        greet() {\n            return \"Hello, \" + this.greeting;\n        }\n    }\n}\nmodule Mankala {\n   export class Features {\n       public turnContinues = false;\n       public seedStoredCount = 0;\n       public capturedCount = 0;\n       public spaceCaptured = NoSpace;\n\n       public clear() {\n           this.turnContinues = false;\n           this.seedStoredCount = 0;\n           this.capturedCount = 0;\n           this.spaceCaptured = NoSpace;\n       }\n\n       public toString() {\n           var stringBuilder = \"\";\n           if (this.turnContinues) {\n               stringBuilder += \" turn continues,\";\n           }\n           stringBuilder += \" stores \" + this.seedStoredCount;\n           if (this.capturedCount > 0) {\n               stringBuilder += \" captures \" + this.capturedCount + \" from space \" + this.spaceCaptured;\n           }\n           return stringBuilder;\n       }\n   }\n}\n"},C.iN)
 C.Ka=new H.GD("call")
 C.q0=H.Kx('Dg')
 C.Yx=H.Kx('Pg')
