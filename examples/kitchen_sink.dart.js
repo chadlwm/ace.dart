@@ -2136,8 +2136,14 @@ for(var x in b){if(c.call(b,x))y.push(x)}return y}(a,Object.prototype.hasOwnProp
 z.fixed$length=init
 return z}}],["","",,P,{
 "^":"",
-xg:function(){if(self.scheduleImmediate!=null)return P.Sx()
-return P.K7()},
+xg:function(){var z,y,x
+z={}
+if(self.scheduleImmediate!=null)return P.Sx()
+if(self.MutationObserver!=null&&self.document!=null){y=self.document.createElement("div")
+x=self.document.createElement("span")
+z.a=null
+new self.MutationObserver(H.tR(new P.th(z),1)).observe(y,{childList:true})
+return new P.ha(z,y,x)}return P.K7()},
 ZV:[function(a){++init.globalState.Xz.GL
 self.scheduleImmediate(H.tR(new P.C6(a),0))},"$1","Sx",2,0,13],
 Bz:[function(a){P.YF(C.RT,a)},"$1","K7",2,0,13],
@@ -2233,6 +2239,23 @@ $.S6=z
 $.ej().$1(P.qZ())}else{y=new P.OM(d,null)
 z.aw=y
 $.k8=y}},
+th:{
+"^":"Tp:31;a",
+$1:[function(a){var z,y
+H.ox()
+z=this.a
+y=z.a
+z.a=null
+y.$0()},"$1",null,2,0,null,40,"call"],
+$isEH:true},
+ha:{
+"^":"Tp:51;a,b,c",
+$1:function(a){var z,y;++init.globalState.Xz.GL
+this.a.a=a
+z=this.b
+y=this.c
+z.firstChild?z.removeChild(y):z.appendChild(y)},
+$isEH:true},
 C6:{
 "^":"Tp:10;a",
 $0:[function(){H.ox()
@@ -2253,10 +2276,10 @@ z.b=null
 x=--z.c
 if(y!=null)if(x===0||this.b)z.a.w0(a,b)
 else{z.d=a
-z.e=b}else if(x===0&&!this.b)z.a.w0(z.d,z.e)},"$2",null,4,0,null,51,52,"call"],
+z.e=b}else if(x===0&&!this.b)z.a.w0(z.d,z.e)},"$2",null,4,0,null,52,53,"call"],
 $isEH:true},
 ff:{
-"^":"Tp:53;a,c,d",
+"^":"Tp:54;a,c,d",
 $1:[function(a){var z,y,x,w
 z=this.a
 y=--z.c
@@ -2427,7 +2450,7 @@ pV:{
 $1:[function(a){this.a.R8(a)},"$1",null,2,0,null,16,"call"],
 $isEH:true},
 U7:{
-"^":"Tp:54;b",
+"^":"Tp:55;b",
 $2:[function(a,b){this.b.K5(a,b)},function(a){return this.$2(a,null)},"$1","$2",null,null,2,2,null,18,19,20,"call"],
 $isEH:true},
 rH:{
@@ -2443,7 +2466,7 @@ ZL:{
 $0:function(){this.a.K5(this.b,this.c)},
 $isEH:true},
 rq:{
-"^":"Tp:55;b,d,e,f",
+"^":"Tp:56;b,d,e,f",
 $0:function(){var z,y,x,w
 try{this.b.c=this.f.FI(this.d.gO1(),this.e)
 return!0}catch(x){w=H.Ru(x)
@@ -2510,10 +2533,10 @@ z.a.Rx(new P.jZ(this.c,v),new P.FZ(z,v))}},
 $isEH:true},
 jZ:{
 "^":"Tp:31;c,HZ",
-$1:[function(a){P.HZ(this.c.e,this.HZ)},"$1",null,2,0,null,56,"call"],
+$1:[function(a){P.HZ(this.c.e,this.HZ)},"$1",null,2,0,null,57,"call"],
 $isEH:true},
 FZ:{
-"^":"Tp:54;a,mG",
+"^":"Tp:55;a,mG",
 $2:[function(a,b){var z,y
 z=this.a
 if(!J.x(z.a).$isvs){y=P.Dt(null)
@@ -2540,7 +2563,7 @@ this.KR(new P.B5(z),!0,new P.PI(z,y),y.gbY())
 return y}},
 lz:{
 "^":"Tp;a,b,c,d",
-$1:[function(a){P.FE(new P.Rl(this.c,a),new P.Jb(),P.TB(this.a.a,this.d))},"$1",null,2,0,null,57,"call"],
+$1:[function(a){P.FE(new P.Rl(this.c,a),new P.Jb(),P.TB(this.a.a,this.d))},"$1",null,2,0,null,58,"call"],
 $isEH:true,
 $signature:function(){return H.IG(function(a){return{func:"Lf",args:[a]}},this.b,"cb")}},
 Rl:{
@@ -2744,7 +2767,7 @@ dR:{
 $0:[function(){return this.a.K5(this.b,this.c)},"$0",null,0,0,null,"call"],
 $isEH:true},
 uR:{
-"^":"Tp:58;a,b",
+"^":"Tp:59;a,b",
 $2:function(a,b){return P.NX(this.a,this.b,a,b)},
 $isEH:true},
 YR:{
@@ -2777,8 +2800,8 @@ z.QE()},"$0","gZ9",0,0,14],
 tA:function(){var z=this.hG
 if(z!=null){this.hG=null
 z.ed()}return},
-vx:[function(a){this.UY.Ml(a,this)},"$1","gOa",2,0,function(){return H.IG(function(a,b){return{func:"kA",void:true,args:[a]}},this.$receiver,"fB")},59],
-xL:[function(a,b){this.V8(a,b)},"$2","gRE",4,0,60,19,20],
+vx:[function(a){this.UY.Ml(a,this)},"$1","gOa",2,0,function(){return H.IG(function(a,b){return{func:"kA",void:true,args:[a]}},this.$receiver,"fB")},60],
+xL:[function(a,b){this.V8(a,b)},"$2","gRE",4,0,61,19,20],
 fE:[function(){this.Ig()},"$0","gH1",0,0,14],
 Xa:function(a,b,c,d,e,f,g){var z,y
 z=this.gOa()
@@ -2853,11 +2876,11 @@ $0:[function(){return this.c.Gr(this.d)},"$0",null,0,0,null,"call"],
 $isEH:true},
 pQ:{
 "^":"Tp:31;a,b",
-$1:[function(a){return this.a.m1(this.b,a)},"$1",null,2,0,null,61,"call"],
+$1:[function(a){return this.a.m1(this.b,a)},"$1",null,2,0,null,62,"call"],
 $isEH:true},
 FG:{
 "^":"Tp:31;c,d",
-$1:[function(a){return this.c.FI(this.d,a)},"$1",null,2,0,null,61,"call"],
+$1:[function(a){return this.c.FI(this.d,a)},"$1",null,2,0,null,62,"call"],
 $isEH:true}}],["","",,P,{
 "^":"",
 WN:function(a,b,c){return H.B7(a,H.VM(new P.YB(0,null,null,null,null,null,0),[b,c]))},
@@ -3015,7 +3038,7 @@ delete z["<non-identifier-key>"]
 return z}}},
 oi:{
 "^":"Tp:31;a",
-$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,62,"call"],
+$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,63,"call"],
 $isEH:true},
 PL:{
 "^":"k6;X5,vv,OX,OB,wV",
@@ -3159,7 +3182,7 @@ delete z["<non-identifier-key>"]
 return z}}},
 a1:{
 "^":"Tp:31;a",
-$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,62,"call"],
+$1:[function(a){return this.a.t(0,a)},"$1",null,2,0,null,63,"call"],
 $isEH:true},
 db:{
 "^":"a;kh<,S4@,An@,zQ@"},
@@ -3475,9 +3498,8 @@ zV:function(a,b){var z,y,x
 z=this.gA(this)
 if(!z.G())return""
 y=P.p9("")
-if(b==="")do{x=H.d(z.fD)
-y.vM+=x}while(z.G())
-else{y.KF(H.d(z.fD))
+if(b===""){do{x=H.d(z.fD)
+y.vM+=x}while(z.G())}else{y.KF(H.d(z.fD))
 for(;z.G();){y.vM+=b
 x=H.d(z.fD)
 y.vM+=x}}return y.vM},
@@ -3523,7 +3545,7 @@ Y2:{
 $2:function(a,b){this.a.u(0,a.gfN(),b)},
 $isEH:true},
 CL:{
-"^":"Tp:63;a",
+"^":"Tp:64;a",
 $2:function(a,b){var z=this.a
 if(z.b>0)z.a.KF(", ")
 z.a.KF(a.gfN())
@@ -3595,7 +3617,7 @@ return""+C.jn.cU(y,3600000000)+":"+H.d(x)+":"+H.d(w)+"."+H.d(v)},
 $isa6:true,
 static:{"^":"Wt,S4,pk,Lo,zj,b2,q9,Ie,Do,Cv,kT,IJ,D9,Vk,nJ,rG",k5:function(a,b,c,d,e,f){return new P.a6(a*86400000000+b*3600000000+e*60000000+f*1000000+d*1000+c)}}},
 P7:{
-"^":"Tp:64;",
+"^":"Tp:65;",
 $1:function(a){if(a>=100000)return""+a
 if(a>=10000)return"0"+a
 if(a>=1000)return"00"+a
@@ -3604,7 +3626,7 @@ if(a>=10)return"0000"+a
 return"00000"+a},
 $isEH:true},
 DW:{
-"^":"Tp:64;",
+"^":"Tp:65;",
 $1:function(a){if(a>=10)return""+a
 return"0"+a},
 $isEH:true},
@@ -3732,9 +3754,8 @@ KF:function(a){this.vM+=typeof a==="string"?a:H.d(a)},
 We:function(a,b){var z,y
 z=J.GP(a)
 if(!z.G())return
-if(b.length===0)do{y=z.gl()
-this.vM+=typeof y==="string"?y:H.d(y)}while(z.G())
-else{this.KF(z.gl())
+if(b.length===0){do{y=z.gl()
+this.vM+=typeof y==="string"?y:H.d(y)}while(z.G())}else{this.KF(z.gl())
 for(;z.G();){this.vM+=b
 y=z.gl()
 this.vM+=typeof y==="string"?y:H.d(y)}}},
@@ -4671,7 +4692,7 @@ I.$lazy($,"_DART_CLOSURE_PROPERTY_NAME","Ri","Dp",function(){return init.getIsol
 I.$lazy($,"_dartProxyCtor","Je","hs",function(){return function DartObject(a){this.o=a}})
 
 init.functionAliases={}
-init.metadata=["object","sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"NT"},{func:"lc",ret:P.E4,args:[E.St]},"c",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Gl",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},"a",{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},"callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"bh",args:[null,null]},"key",{func:"zx",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"jn",args:[null,null,null,null]},"_",{func:"Ho",args:[P.qU],opt:[P.zM]},"proxy","module","editor","session","pos","prefix",{func:"du",args:[null,null,null,null,P.r7]},"results",{func:"mR",args:[[P.zM,E.St]]},"theError","theStackTrace",{func:"rf",args:[P.a]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","element",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:P.qU,args:[P.KN]},];$=null
+init.metadata=["object","sender","e","closure","isolate","numberOfArguments","arg1","arg2","arg3","arg4",{func:"NT"},{func:"lc",ret:P.E4,args:[E.St]},"c",{func:"n9",void:true,args:[{func:"X0",void:true}]},{func:"X0",void:true},{func:"G5",void:true,args:[null]},"value",{func:"Vx",void:true,args:[null],opt:[P.mE]},,"error","stackTrace",{func:"Gl",ret:P.a2,args:[null,null]},{func:"bX",ret:P.KN,args:[null]},"a",{func:"Vs",ret:P.KN,args:[P.fR,P.fR]},{func:"E0",ret:P.a2,args:[P.a,P.a]},{func:"ZY",ret:P.KN,args:[P.a]},"callback","captureThis","self","arguments",{func:"aB",args:[null]},"o",{func:"uJ",ret:P.a,args:[null]},{func:"bh",args:[null,null]},"key",{func:"zx",args:[P.qU]},{func:"Za",args:[P.qU,null]},{func:"TS",args:[null,P.qU]},{func:"jn",args:[null,null,null,null]},"_",{func:"Ho",args:[P.qU],opt:[P.zM]},"proxy","module","editor","session","pos","prefix",{func:"du",args:[null,null,null,null,P.r7]},"results",{func:"mR",args:[[P.zM,E.St]]},{func:"xO",args:[{func:"X0",void:true}]},"theError","theStackTrace",{func:"rf",args:[P.a]},{func:"BG",args:[null],opt:[null]},{func:"Uf",ret:P.a2},"ignored","element",{func:"bb",args:[null,P.mE]},"data",{func:"N5",void:true,args:[null,P.mE]},"arg","each",{func:"lv",args:[P.wv,null]},{func:"Pt",ret:P.qU,args:[P.KN]},];$=null
 I = I.$finishIsolateConstructor(I)
 $=new I()
 function convertToFastObject(a){function MyClass(){}MyClass.prototype=a
