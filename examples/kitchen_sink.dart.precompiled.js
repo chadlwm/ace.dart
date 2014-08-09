@@ -1664,7 +1664,8 @@ $.qW().appendChild(G.cw())
 $.qW().appendChild(G.Vv())
 $.qW().appendChild(G.TP())
 $.qW().appendChild(G.Z6("showInvisibles","Show Invisibles ",!1))
-$.qW().appendChild(G.Z6("showGutter","Show Gutter ",!0))},"$0","HA",0,0,10],
+$.qW().appendChild(G.Z6("showGutter","Show Gutter ",!0))
+$.qW().appendChild(G.Z6("showPrintMargin","Show Print Margin ",!0))},"$0","HA",0,0,10],
 Xu:function(){var z,y,x
 z=$.DG.Od("ace/ext/language_tools")
 $.DG.toString
