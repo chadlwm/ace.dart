@@ -1927,12 +1927,10 @@ x.V7("setAnnotations",[H.VM(new P.Tz(u),[null])])},"$1",null,2,0,null,41,"call"]
 $isEH:true},
 ZZ:{
 "^":"Tp:33;a",
-$1:[function(a){var z,y,x,w,v,u,t
+$1:[function(a){var z,y,x,w,v,u
 z=H.VM(new H.A8(new B.uo(null,null,null,null,null,null,null,null,null,null,null,null,$.fw().Dj.V7("getSession",null),null).Q0(),new G.Xa()),[null,null])
 for(y=new H.a7(z,z.gB(z),0,null),x=this.a;y.G();){w=y.Ff
 for(v=new H.a7(x,3,0,null);v.G();){u=v.Ff
-t=H.d(w)
-H.qw(t)
 $.fw().Dj.V7("getSession",null).V7("removeGutterDecoration",[w,u])}}$.fw().Dj.V7("getSession",null).V7("clearAnnotations",null)},"$1",null,2,0,null,41,"call"],
 $isEH:true},
 Xa:{
