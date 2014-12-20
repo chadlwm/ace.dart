@@ -1061,7 +1061,7 @@ case 4:return function(e,f){return function(g,h,i,j){return f(this)[e](g,h,i,j)}
 case 5:return function(e,f){return function(g,h,i,j,k){return f(this)[e](g,h,i,j,k)}}(c,z)
 default:return function(e,f){return function(){return e.apply(f(this),arguments)}}(d,z)}},
 SD:function(a,b,c){var z,y,x,w,v,u
-if(c)return H.eT(a,b)
+if(c)return H.Hf(a,b)
 z=b.$stubName
 y=b.length
 x=a[z]
@@ -1093,7 +1093,7 @@ case 6:return function(e,f,g){return function(h,i,j,k,l){return f(this)[e](g(thi
 default:return function(e,f,g,h){return function(){h=[g(this)]
 Array.prototype.push.apply(h,arguments)
 return e.apply(f(this),h)}}(d,z,y)}},
-eT:function(a,b){var z,y,x,w,v,u,t,s
+Hf:function(a,b){var z,y,x,w,v,u,t,s
 z=H.oN()
 y=$.P4
 if(y==null){y=H.E2("receiver")
@@ -1782,7 +1782,7 @@ u.appendChild(z)
 J.H2(u,["control"])
 return u},
 cw:function(){var z,y,x,w
-for(z=new H.a7(C.Hf,119,0,null);z.D();){y=z.c
+for(z=new H.a7(C.tr,120,0,null);z.D();){y=z.c
 x=W.oK("","",null,!1)
 x.textContent=y
 x.value=y
@@ -4073,7 +4073,7 @@ if(z)return y+"-"+x+"-"+w+" "+v+":"+u+":"+t+"."+s+"Z"
 else return y+"-"+x+"-"+w+" "+v+":"+u+":"+t+"."+s},
 RM:function(a,b){if(Math.abs(a)>8640000000000000)throw H.b(P.p(a))},
 $isiP:true,
-static:{"^":"Oj,Vp,Ej,p2,ch,QC,Px,Yp,FS,Xs,Fz,cR,E0,Ke,Cg,Nr,Dk,FI,Kz,ek,yf,I2",Wu:function(a,b){var z=new P.iP(a,b)
+static:{"^":"Oj,Vp,Ej,p2,ch,QC,Px,Zx,FS,Xs,Fz,cR,E0,Ke,Cg,Nr,Dk,FI,Kz,ek,yf,I2",Wu:function(a,b){var z=new P.iP(a,b)
 z.RM(a,b)
 return z},Gq:function(a){var z,y
 z=Math.abs(a)
@@ -5579,8 +5579,8 @@ C.hQ=function(hooks) {
 C.xr=new P.by(null,null)
 C.A3=new P.QM(null)
 C.IU=I.uL(["ambiance","chaos","chrome","clouds","clouds_midnight","cobalt","crimson_editor","dawn","dreamweaver","eclipse","github","idle_fingers","katzenmilch","kr_theme","kuroir","merbivore","merbivore_soft","mono_industrial","monokai","pastel_on_dark","solarized_dark","solarized_light","terminal","textmate","tomorrow","tomorrow_night","tomorrow_night_blue","tomorrow_night_bright","tomorrow_night_eighties","twilight","vibrant_ink","xcode"])
+C.tr=I.uL(["abap","actionscript","ada","apache_conf","applescript","asciidoc","assembly_x86","autohotkey","batchfile","c9search","c_cpp","cirru","clojure","cobol","coffee","coldfusion","csharp","css","curly","d","dart","diff","django","dockerfile","dot","eiffel","ejs","elixir","elm","erlang","forth","ftl","gcode","gherkin","gitignore","glsl","golang","groovy","haml","handlebars","haskell","haxe","html","html_ruby","ini","io","jack","jade","java","javascript","json","jsoniq","jsp","jsx","julia","latex","less","liquid","lisp","livescript","logiql","lsl","lua","luapage","lucene","makefile","markdown","mask","matlab","mel","mushcode","mysql","nix","objectivec","ocaml","pascal","perl","pgsql","php","plain_text","powershell","praat","prolog","properties","protobuf","python","r","rdoc","rhtml","ruby","rust","sass","scad","scala","scheme","scss","sh","sjs","smarty","snippets","soy_template","space","sql","stylus","svg","tcl","tex","text","textile","toml","twig","typescript","vala","vbscript","velocity","verilog","vhdl","xml","xquery","yaml"])
 C.xD=I.uL([])
-C.Hf=I.uL(["abap","actionscript","ada","apache_conf","applescript","asciidoc","assembly_x86","autohotkey","batchfile","c9search","c_cpp","cirru","clojure","cobol","coffee","coldfusion","csharp","css","curly","d","dart","diff","django","dockerfile","dot","eiffel","ejs","elixir","elm","erlang","forth","ftl","gcode","gherkin","gitignore","glsl","golang","groovy","haml","handlebars","haskell","haxe","html","html_ruby","ini","io","jack","jade","java","javascript","json","jsoniq","jsp","jsx","julia","latex","less","liquid","lisp","livescript","logiql","lsl","lua","luapage","lucene","makefile","markdown","matlab","mel","mushcode","mysql","nix","objectivec","ocaml","pascal","perl","pgsql","php","plain_text","powershell","praat","prolog","properties","protobuf","python","r","rdoc","rhtml","ruby","rust","sass","scad","scala","scheme","scss","sh","sjs","smarty","snippets","soy_template","space","sql","stylus","svg","tcl","tex","text","textile","toml","twig","typescript","vala","vbscript","velocity","verilog","vhdl","xml","xquery","yaml"])
 C.dk=I.uL([null,"emacs","vim"])
 C.iN=I.uL(["css","dart","html","javascript","typescript"])
 C.EF=new H.LP(5,{css:".text-layer {\n    font-family: Monaco, \"Courier New\", monospace;\n    font-size: 12pX;\n    cursor: text;\n}\n\n.blinker {\n    animation-duration: 1s;\n    animation-name: blink;\n    animation-iteration-count: infinite;\n    animation-direction: alternate;\n    animation-timing-function: linear;\n}\n\n@keyframes blink {\n    0% {\n        opacity: 0;\n    }\n    40% {\n        opacity: 0;\n    }\n    40.5% {\n        opacity: 1\n    }\n    100% {\n        opacity: 1\n    }\n}\n",dart:"// Go ahead and modify this example.\n\nimport \"dart:html\";\n\n// Computes the nth Fibonacci number.\nint fibonacci(int n) {\n  if (n < 2) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\n// Displays a Fibonacci number.\nvoid main() {\n  int i = 20;\n  String message = \"fibonacci($i) = ${fibonacci(i)}\";\n\n  // This example uses HTML to display the result and it will appear\n  // in a nested HTML frame (an iframe).\n  document.body.append(new HeadingElement.h1()..appendText(message));\n}\n",html:"<!DOCTYPE html>\n<html>\n    <head>\n\n    <style type=\"text/css\">\n        .text-layer {\n            font-family: Monaco, \"Courier New\", monospace;\n            font-size: 12px;\n            cursor: text;\n        }\n    </style>\n\n    </head>\n    <body>\n        <h1 style=\"color:red\">Juhu Kinners</h1>\n    </body>\n</html>\n",javascript:"function foo(items, nada) {\n    for (var i=0; i<items.length; i++) {\n        alert(items[i] + \"juhu\\n\");\n    } // Real Tab.\n}\n",typescript:"class Greeter {\n  greeting: string;\n  constructor (message: string) {\n    this.greeting = message;\n  }\n  greet() {\n    return \"Hello, \" + this.greeting;\n  }\n}   \n\nvar greeter = new Greeter(\"world\");\n\nvar button = document.createElement('button')\nbutton.innerText = \"Say Hello\"\nbutton.onclick = function() {\n  alert(greeter.greet())\n}\n\ndocument.body.appendChild(button)\n\nclass Snake extends Animal {\n   move() {\n       alert(\"Slithering...\");\n       super(5);\n   }\n}\n\nclass Horse extends Animal {\n   move() {\n       alert(\"Galloping...\");\n       super.move(45);\n   }\n}\n\nmodule Sayings {\n    export class Greeter {\n        greeting: string;\n        constructor (message: string) {\n            this.greeting = message;\n        }\n        greet() {\n            return \"Hello, \" + this.greeting;\n        }\n    }\n}\nmodule Mankala {\n   export class Features {\n       public turnContinues = false;\n       public seedStoredCount = 0;\n       public capturedCount = 0;\n       public spaceCaptured = NoSpace;\n\n       public clear() {\n           this.turnContinues = false;\n           this.seedStoredCount = 0;\n           this.capturedCount = 0;\n           this.spaceCaptured = NoSpace;\n       }\n\n       public toString() {\n           var stringBuilder = \"\";\n           if (this.turnContinues) {\n               stringBuilder += \" turn continues,\";\n           }\n           stringBuilder += \" stores \" + this.seedStoredCount;\n           if (this.capturedCount > 0) {\n               stringBuilder += \" captures \" + this.capturedCount + \" from space \" + this.spaceCaptured;\n           }\n           return stringBuilder;\n       }\n   }\n}\n"},C.iN)
