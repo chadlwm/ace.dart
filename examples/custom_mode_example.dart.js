@@ -213,6 +213,7 @@ p:function(a,b){if(typeof b!=="number"||Math.floor(b)!==b)throw H.b(P.p(b))
 if(b>=a.length||b<0)throw H.b(P.D(b,null,null))
 return a[b]},
 q:function(a,b,c){this.uy(a,"indexed set")
+if(typeof b!=="number"||Math.floor(b)!==b)throw H.b(P.p(b))
 if(b>=a.length||b<0)throw H.b(P.D(b,null,null))
 a[b]=c},
 $isG:true,
@@ -3281,7 +3282,8 @@ if(typeof b==="number"&&b===C.jn.yu(b)){if(typeof b==="number"&&Math.floor(b)===
 else z=!1
 if(z)H.vh(P.TE(b,0,this.gv(this),null,null))}return this.lg(this,b)},
 q:function(a,b,c){var z
-if(b===C.jn.yu(b)){z=b<0||b>=this.gv(this)
+if(typeof b==="number"&&b===C.jn.yu(b)){if(typeof b==="number"&&Math.floor(b)===b)z=b<0||b>=this.gv(this)
+else z=!1
 if(z)H.vh(P.TE(b,0,this.gv(this),null,null))}this.kW(this,b,c)},
 gv:function(a){var z=this.Q.length
 if(typeof z==="number"&&z>>>0===z)return z
@@ -3562,6 +3564,8 @@ if(typeof a!="object")return a
 if(a instanceof P.a)return a
 return J.ks(a)}
 J.C0=function(a,b){return J.w1(a).ez(a,b)}
+J.C7=function(a,b,c){if((a.constructor==Array||H.wV(a,a[init.dispatchPropertyName]))&&!a.immutable$list&&b>>>0===b&&b<a.length)return a[b]=c
+return J.w1(a).q(a,b,c)}
 J.DZ=function(a,b){return J.t(a).P(a,b)}
 J.KC=function(a){return J.RE(a).gyG(a)}
 J.Lz=function(a){return J.t(a).X(a)}
@@ -3780,7 +3784,9 @@ I.$lazy($,"undefinedPropertyPattern","dt","eA",function(){return H.cM(H.Mj(void 
 I.$lazy($,"undefinedLiteralPropertyPattern","A7","ko",function(){return H.cM(function(){try{(void 0).$method$}catch(z){return z.message}}())})
 I.$lazy($,"editor","W","S",function(){var z=document.querySelector("#editor")
 $.T.toString
-return new B.KD(null,null,null,null,null,null,null,null,null,J.Q($.rj(),"ace").Z("edit",[z]),null)})
+z=J.Q($.rj(),"ace").Z("edit",[z])
+J.C7(z,"$blockScrolling",1/0)
+return new B.KD(null,null,null,null,null,null,null,null,null,z,null)})
 I.$lazy($,"scheduleImmediateClosure","lI","ej",function(){return P.xg()})
 I.$lazy($,"_toStringVisiting","nM","Ex",function(){return[]})
 I.$lazy($,"context","N","rj",function(){return P.ND(self)})

@@ -558,7 +558,7 @@ case"stopErrors":this.dx.Rz(0,z.p(a,1))
 break}},
 Zt:function(a){return this.a.p(0,a)},
 ac:function(a,b){var z=this.a
-if(z.NZ(a))throw H.b(P.FM("Registry: ports must be registered only once."))
+if(z.x4(a))throw H.b(P.FM("Registry: ports must be registered only once."))
 z.q(0,a,b)},
 CX:function(){if(this.a.Q-this.b.Q>0||this.x||!this.r)init.globalState.y.q(0,this.Q,this)
 else this.Dm()},
@@ -583,7 +583,7 @@ if(z.a===z.b)return
 return z.C4()},
 xB:function(){var z,y,x
 z=this.Jc()
-if(z==null){if(init.globalState.d!=null&&init.globalState.y.NZ(init.globalState.d.Q)&&init.globalState.f===!0&&init.globalState.d.a.Q===0)H.vh(P.FM("Program exited with open ReceivePorts."))
+if(z==null){if(init.globalState.d!=null&&init.globalState.y.x4(init.globalState.d.Q)&&init.globalState.f===!0&&init.globalState.d.a.Q===0)H.vh(P.FM("Program exited with open ReceivePorts."))
 y=init.globalState
 if(y.r===!0&&y.y.Q===0&&y.e.a===0){y=y.z
 x=P.B(["command","close"],null,null)
@@ -846,7 +846,7 @@ if(2>=z)return H.e(a,2)
 x=a[2]
 w=P.A(null,null)
 this.a.push(w)
-y=J.C0(y,this.gia()).br(0)
+y=J.kl(y,this.gia()).br(0)
 for(z=J.U(y),v=J.U(x),u=0;u<z.gv(y);++u)w.q(0,z.p(y,u),this.QS(v.p(x,u)))
 return w},
 Vf:function(a){var z,y,x,w,v,u,t
@@ -1293,10 +1293,10 @@ q:function(a,b,c){return this.K2()},
 $isw:true},
 LP:{
 "^":"ys;v:Q>,a,b",
-NZ:function(a){if(typeof a!=="string")return!1
+x4:function(a){if(typeof a!=="string")return!1
 if("__proto__"===a)return!1
 return this.a.hasOwnProperty(a)},
-p:function(a,b){if(!this.NZ(b))return
+p:function(a,b){if(!this.x4(b))return
 return this.qP(b)},
 qP:function(a){return this.a[a]},
 aN:function(a,b){var z,y,x
@@ -1390,7 +1390,7 @@ this.a.push(b);++z.a}},
 Gi:{
 "^":"r:37;Q,a",
 $2:function(a,b){var z=this.a
-if(z.NZ(a))z.q(0,a,b)
+if(z.x4(a))z.q(0,a,b)
 else this.Q.a=!0}},
 Zr:{
 "^":"a;Q,a,b,c,d,e",
@@ -2126,8 +2126,9 @@ return z}}},
 GN:{
 "^":"r:53;Q",
 $5:[function(a,b,c,d,e){var z,y,x,w,v,u
-z=a==null?null:new B.KD(null,null,null,null,null,null,null,null,null,a,null)
-y=b==null?null:new B.O(null,null,null,null,null,null,null,null,null,null,null,null,b,null)
+if(a==null)z=null
+else{z=new B.KD(null,null,null,null,null,null,null,null,null,a,null)
+J.C7(a,"$blockScrolling",1/0)}y=b==null?null:new B.O(null,null,null,null,null,null,null,null,null,null,null,null,b,null)
 x=J.U(c)
 x=this.Q.TK(z,y,new E.hL(x.p(c,"row"),x.p(c,"column")),d).ml(new B.PV(e))
 w=new B.Jp(e)
@@ -2139,7 +2140,7 @@ v.wM(new B.mc(z,y))},"$5",null,10,0,null,49,50,51,52,29,"call"]},
 PV:{
 "^":"r:55;Q",
 $1:[function(a){var z=[]
-C.Nm.FV(z,J.C0(a,B.Dv()).ez(0,P.En()))
+C.Nm.FV(z,J.kl(a,B.Dv()).ez(0,P.En()))
 this.Q.PO([null,H.J(new P.Tz(z),[null])])},"$1",null,2,0,null,54,"call"]},
 Jp:{
 "^":"r:33;Q",
@@ -3401,7 +3402,7 @@ bA:{
 "^":"a;",
 gv:function(a){return this.Q},
 gvc:function(){return H.J(new P.fG(this),[H.Kp(this,0)])},
-NZ:function(a){var z,y
+x4:function(a){var z,y
 if(typeof a==="string"&&a!=="__proto__"){z=this.a
 return z==null?!1:z[a]!=null}else if(typeof a==="number"&&(a&0x3ffffff)===a){y=this.b
 return y==null?!1:y[a]!=null}else return this.KY(a)},
@@ -3506,7 +3507,7 @@ gv:function(a){return this.Q},
 gl0:function(a){return this.Q===0},
 gvc:function(){return H.J(new P.i5(this),[H.Kp(this,0)])},
 gUQ:function(a){return H.K1(H.J(new P.i5(this),[H.Kp(this,0)]),new P.a1(this),H.Kp(this,0),H.Kp(this,1))},
-NZ:function(a){var z,y
+x4:function(a){var z,y
 if(typeof a==="string"&&a!=="__proto__"){z=this.a
 if(z==null)return!1
 return z[a]!=null}else if(typeof a==="number"&&(a&0x3ffffff)===a){y=this.b
@@ -3541,10 +3542,10 @@ z=this.c
 if(z==null){z=P.Qs()
 this.c=z}y=this.rk(a)
 x=z[y]
-if(x==null)z[y]=[this.x4(a,b)]
+if(x==null)z[y]=[this.Oz(a,b)]
 else{w=this.DF(x,a)
 if(w>=0)x[w].scA(b)
-else x.push(this.x4(a,b))}},
+else x.push(this.Oz(a,b))}},
 Rz:function(a,b){if(typeof b==="string"&&b!=="__proto__")return this.H4(this.a,b)
 else if(typeof b==="number"&&(b&0x3ffffff)===b)return this.H4(this.b,b)
 else return this.qg(b)},
@@ -3571,7 +3572,7 @@ for(;z!=null;){b.$2(z.gv8(),z.gcA())
 if(y!==this.f)throw H.b(P.a4(this))
 z=z.gDG()}},
 u9:function(a,b,c){var z=a[b]
-if(z==null)a[b]=this.x4(b,c)
+if(z==null)a[b]=this.Oz(b,c)
 else z.scA(c)},
 H4:function(a,b){var z
 if(a==null)return
@@ -3580,7 +3581,7 @@ if(z==null)return
 this.GS(z)
 delete a[b]
 return z.gcA()},
-x4:function(a,b){var z,y
+Oz:function(a,b){var z,y
 z=new P.db(a,b,null,null)
 if(this.d==null){this.e=z
 this.d=z}else{y=this.e
@@ -3967,11 +3968,11 @@ var z=this.Cf()
 return H.j5(z,0,null,H.Kp(H.J(new H.TN(),[H.Kp(z,0)]),0))},
 q:function(a,b,c){var z,y
 if(this.a==null)this.b.q(0,b,c)
-else if(this.NZ(b)){z=this.a
+else if(this.x4(b)){z=this.a
 z[b]=c
 y=this.Q
 if(y==null?z!=null:y!==z)y[b]=null}else this.XK().q(0,b,c)},
-NZ:function(a){if(this.a==null)return this.b.NZ(a)
+x4:function(a){if(this.a==null)return this.b.x4(a)
 if(typeof a!=="string")return!1
 return Object.prototype.hasOwnProperty.call(this.Q,a)},
 aN:function(a,b){var z,y,x,w
@@ -4349,7 +4350,7 @@ z=J.kI(a.left)
 y=J.kI(a.top)
 x=J.kI(this.gN(a))
 w=J.kI(this.gfg(a))
-return W.Up(W.VC(W.VC(W.VC(W.VC(0,z),y),x),w))},
+return W.Up(W.C0(W.C0(W.C0(W.C0(0,z),y),x),w))},
 $istn:true,
 $astn:function(){return[null]},
 "%":";DOMRectReadOnly"},
@@ -4533,7 +4534,7 @@ z=J.kI(a.left)
 y=J.kI(a.top)
 x=J.kI(a.width)
 w=J.kI(a.height)
-return W.Up(W.VC(W.VC(W.VC(W.VC(0,z),y),x),w))},
+return W.Up(W.C0(W.C0(W.C0(W.C0(0,z),y),x),w))},
 $istn:true,
 $astn:function(){return[null]},
 "%":"ClientRect"},
@@ -4571,7 +4572,7 @@ dy:function(a){var z,y
 z=document.createElement("input",null)
 if(a!=null)try{J.Lp(z,a)}catch(y){H.Ru(y)}return z},
 oK:function(a,b,c,d){return new Option(a,b,c,d)},
-VC:function(a,b){a=536870911&a+b
+C0:function(a,b){a=536870911&a+b
 a=536870911&a+((524287&a)<<10>>>0)
 return a^a>>>6},
 Up:function(a){a=536870911&a+((67108863&a)<<3>>>0)
@@ -4898,7 +4899,7 @@ XY:{
 R4:[function(a,b,c,d){var z,y
 if(b===!0){z=[c]
 C.Nm.FV(z,d)
-d=z}y=P.z(J.C0(d,P.Xl()),!0,null)
+d=z}y=P.z(J.kl(d,P.Xl()),!0,null)
 return P.wY(H.im(a,y,null))},"$4","uu",8,0,null,29,30,31,32],
 Dm:function(a,b,c){var z
 if(Object.isExtensible(a)&&!Object.prototype.hasOwnProperty.call(a,b))try{Object.defineProperty(a,b,{value:c})
@@ -4947,7 +4948,7 @@ return this.L7(this)}},
 V7:function(a,b){var z,y
 if(typeof a!=="string"&&typeof a!=="number")throw H.b(P.p("method is not a String or num"))
 z=this.Q
-y=b==null?null:P.z(J.C0(b,P.En()),!0,null)
+y=b==null?null:P.z(J.kl(b,P.En()),!0,null)
 return P.dU(z[a].apply(z,y))},
 $isE4:true,
 static:{zV:function(a,b){var z,y,x
@@ -4962,7 +4963,7 @@ oa:{
 "^":"r:33;Q",
 $1:[function(a){var z,y,x,w,v
 z=this.Q
-if(z.NZ(a))return z.p(0,a)
+if(z.x4(a))return z.p(0,a)
 y=J.t(a)
 if(!!y.$isw){x={}
 z.q(0,a,x)
@@ -5016,7 +5017,7 @@ QS:{
 "^":"r:33;",
 $1:function(a){return new P.E4(a)}}}],["","",,P,{
 "^":"",
-Zm:function(a,b){a=536870911&a+b
+VC:function(a,b){a=536870911&a+b
 a=536870911&a+((524287&a)<<10>>>0)
 return a^a>>>6},
 xk:function(a){a=536870911&a+((67108863&a)<<3>>>0)
@@ -5375,7 +5376,6 @@ if(a.constructor==Array)return J.G.prototype
 if(typeof a!="object")return a
 if(a instanceof P.a)return a
 return J.ks(a)}
-J.C0=function(a,b){return J.w1(a).ez(a,b)}
 J.C7=function(a,b,c){if((a.constructor==Array||H.wV(a,a[init.dispatchPropertyName]))&&!a.immutable$list&&b>>>0===b&&b<a.length)return a[b]=c
 return J.w1(a).q(a,b,c)}
 J.DZ=function(a,b){return J.t(a).P(a,b)}
@@ -5412,6 +5412,7 @@ J.i4=function(a,b){return J.w1(a).Zv(a,b)}
 J.kE=function(a,b){return J.U(a).tg(a,b)}
 J.kH=function(a,b){return J.w1(a).aN(a,b)}
 J.kI=function(a){return J.t(a).giO(a)}
+J.kl=function(a,b){return J.w1(a).ez(a,b)}
 J.mG=function(a,b){if(a==null)return b==null
 if(typeof a!="object")return b!=null&&a===b
 return J.t(a).m(a,b)}
@@ -5631,7 +5632,9 @@ I.$lazy($,"undefinedPropertyPattern","dt","eA",function(){return H.cM(H.Mj(void 
 I.$lazy($,"undefinedLiteralPropertyPattern","A7","ko",function(){return H.cM(function(){try{(void 0).$method$}catch(z){return z.message}}())})
 I.$lazy($,"editor","W","S",function(){var z=document.querySelector("#editor")
 $.T.toString
-return new B.KD(null,null,null,null,null,null,null,null,null,J.Q($.rj(),"ace").V7("edit",[z]),null)})
+z=J.Q($.rj(),"ace").V7("edit",[z])
+J.C7(z,"$blockScrolling",1/0)
+return new B.KD(null,null,null,null,null,null,null,null,null,z,null)})
 I.$lazy($,"controls","P","Vc",function(){return document.querySelector("#controls")})
 I.$lazy($,"_annotationTypeSelector","cr","r1",function(){return document.createElement("select",null)})
 I.$lazy($,"modesSelect","Gg","aA",function(){return document.createElement("select",null)})
